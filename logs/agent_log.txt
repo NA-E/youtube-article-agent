@@ -1,0 +1,359 @@
+[2025-10-13 15:15:38] [INFO] Python version: 3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]
+[2025-10-13 15:15:38] [INFO] Working directory: C:\Claude Agent SDK\youtube-article-agent
+[2025-10-13 15:15:38] [WARNING] Warning: ANTHROPIC_API_KEY not found in environment
+[2025-10-13 15:15:38] [INFO] ============================================================
+[2025-10-13 15:15:38] [INFO] YouTube to Article Writer Agent - Starting
+[2025-10-13 15:15:38] [INFO] ============================================================
+[2025-10-13 15:16:57] [INFO] Python version: 3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]
+[2025-10-13 15:16:57] [INFO] Working directory: C:\Claude Agent SDK\youtube-article-agent
+[2025-10-13 15:16:57] [INFO] ============================================================
+[2025-10-13 15:16:57] [INFO] YouTube to Article Writer Agent - Starting
+[2025-10-13 15:16:57] [INFO] ============================================================
+[2025-10-13 15:18:58] [INFO] Python version: 3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]
+[2025-10-13 15:18:58] [INFO] Working directory: C:\Claude Agent SDK\youtube-article-agent
+[2025-10-13 15:18:58] [INFO] ============================================================
+[2025-10-13 15:18:58] [INFO] YouTube to Article Writer Agent - Starting
+[2025-10-13 15:18:58] [INFO] ============================================================
+[2025-10-13 15:40:21] [INFO] Python version: 3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]
+[2025-10-13 15:40:21] [INFO] Working directory: C:\Claude Agent SDK\youtube-article-agent
+[2025-10-13 15:40:21] [INFO] ============================================================
+[2025-10-13 15:40:21] [INFO] YouTube to Article Writer Agent - Starting
+[2025-10-13 15:40:21] [INFO] ============================================================
+[2025-10-13 15:40:21] [INFO] Initializing agent with tools...
+[2025-10-13 15:41:21] [ERROR] Fatal error: Control request timeout: initialize
+[2025-10-13 15:41:21] [ERROR] Full error details:
+[2025-10-13 15:41:22] [ERROR] Traceback (most recent call last):
+  File "C:\Users\ekano\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_core\_tasks.py", line 120, in fail_after
+    yield cancel_scope
+  File "C:\Users\ekano\AppData\Local\Programs\Python\Python310\lib\site-packages\claude_agent_sdk\_internal\query.py", line 310, in _send_control_request
+    await event.wait()
+  File "C:\Users\ekano\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_backends\_asyncio.py", line 1783, in wait
+    await self._event.wait()
+  File "C:\Users\ekano\AppData\Local\Programs\Python\Python310\lib\asyncio\locks.py", line 214, in wait
+    await fut
+asyncio.exceptions.CancelledError: Cancelled via cancel scope 18028ce18d0; reason: deadline exceeded
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ekano\AppData\Local\Programs\Python\Python310\lib\site-packages\claude_agent_sdk\_internal\query.py", line 309, in _send_control_request
+    with anyio.fail_after(60.0):
+  File "C:\Users\ekano\AppData\Local\Programs\Python\Python310\lib\contextlib.py", line 153, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\ekano\AppData\Local\Programs\Python\Python310\lib\site-packages\anyio\_core\_tasks.py", line 123, in fail_after
+    raise TimeoutError
+TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Claude Agent SDK\youtube-article-agent\agent.py", line 108, in main
+    async with ClaudeSDKClient(options) as agent:
+  File "C:\Users\ekano\AppData\Local\Programs\Python\Python310\lib\site-packages\claude_agent_sdk\client.py", line 319, in __aenter__
+    await self.connect()
+  File "C:\Users\ekano\AppData\Local\Programs\Python\Python310\lib\site-packages\claude_agent_sdk\client.py", line 144, in connect
+    await self._query.initialize()
+  File "C:\Users\ekano\AppData\Local\Programs\Python\Python310\lib\site-packages\claude_agent_sdk\_internal\query.py", line 123, in initialize
+    response = await self._send_control_request(request)
+  File "C:\Users\ekano\AppData\Local\Programs\Python\Python310\lib\site-packages\claude_agent_sdk\_internal\query.py", line 323, in _send_control_request
+    raise Exception(f"Control request timeout: {request.get('subtype')}") from e
+Exception: Control request timeout: initialize
+
+[2025-10-13 15:43:36] [INFO] Python version: 3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]
+[2025-10-13 15:43:36] [INFO] Working directory: C:\Claude Agent SDK\youtube-article-agent
+[2025-10-13 15:43:36] [INFO] ============================================================
+[2025-10-13 15:43:36] [INFO] YouTube to Article Writer Agent - Starting (Simple Mode)
+[2025-10-13 15:43:36] [INFO] ============================================================
+[2025-10-13 15:43:36] [INFO] Starting autonomous workflow with simple query API...
+[2025-10-13 15:43:36] [INFO] Sending query to agent...
+[2025-10-13 15:43:44] [ERROR] Fatal error: Command failed with exit code 1 (exit code: 1)
+Error output: Check stderr output for details
+[2025-10-13 15:43:44] [ERROR] Full error details:
+[2025-10-13 15:43:44] [ERROR] Traceback (most recent call last):
+  File "C:\Claude Agent SDK\youtube-article-agent\agent_simple.py", line 226, in main
+    async for message in query(prompt=query_text, options=options):
+  File "C:\Users\ekano\AppData\Local\Programs\Python\Python310\lib\site-packages\claude_agent_sdk\query.py", line 123, in query
+    async for message in client.process_query(
+  File "C:\Users\ekano\AppData\Local\Programs\Python\Python310\lib\site-packages\claude_agent_sdk\_internal\client.py", line 117, in process_query
+    async for data in query.receive_messages():
+  File "C:\Users\ekano\AppData\Local\Programs\Python\Python310\lib\site-packages\claude_agent_sdk\_internal\query.py", line 500, in receive_messages
+    raise Exception(message.get("error", "Unknown error"))
+Exception: Command failed with exit code 1 (exit code: 1)
+Error output: Check stderr output for details
+
+[2025-10-13 15:48:22] [INFO] Python version: 3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]
+[2025-10-13 15:48:22] [INFO] Working directory: C:\Claude Agent SDK\youtube-article-agent
+[2025-10-13 15:48:22] [INFO] ============================================================
+[2025-10-13 15:48:22] [INFO] YouTube to Article Writer Agent - Direct Execution
+[2025-10-13 15:48:22] [INFO] ============================================================
+[2025-10-13 15:48:22] [INFO] STEP 1: Reading input files...
+[2025-10-13 15:48:22] [ERROR] 
+Fatal error: 'SdkMcpTool' object is not callable
+[2025-10-13 15:48:22] [ERROR] Full error details:
+[2025-10-13 15:48:22] [ERROR] Traceback (most recent call last):
+  File "C:\Claude Agent SDK\youtube-article-agent\agent_direct.py", line 57, in main
+    inputs_result = await read_input_files({})
+TypeError: 'SdkMcpTool' object is not callable
+
+[2025-10-13 15:50:19] [INFO] Python version: 3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]
+[2025-10-13 15:50:19] [INFO] Working directory: C:\Claude Agent SDK\youtube-article-agent
+[2025-10-13 15:50:19] [INFO] ============================================================
+[2025-10-13 15:50:19] [INFO] YouTube to Article Writer Agent - Direct Execution
+[2025-10-13 15:50:19] [INFO] ============================================================
+[2025-10-13 15:50:19] [INFO] STEP 1: Reading input files...
+[2025-10-13 15:50:19] [ERROR] 
+Fatal error: 'charmap' codec can't encode character '\u2713' in position 29: character maps to <undefined>
+[2025-10-13 15:50:19] [ERROR] Full error details:
+[2025-10-13 15:51:14] [INFO] Python version: 3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]
+[2025-10-13 15:51:14] [INFO] Working directory: C:\Claude Agent SDK\youtube-article-agent
+[2025-10-13 15:51:14] [INFO] ============================================================
+[2025-10-13 15:51:14] [INFO] YouTube to Article Writer Agent - Direct Execution
+[2025-10-13 15:51:14] [INFO] ============================================================
+[2025-10-13 15:51:14] [INFO] STEP 1: Reading input files...
+[2025-10-13 15:51:14] [INFO] [OK] Topic: context engineering
+[2025-10-13 15:51:14] [INFO] [OK] Article prompt loaded (355 chars)
+[2025-10-13 15:51:14] [INFO] 
+STEP 2: Searching YouTube for 'context engineering'...
+[2025-10-13 15:51:15] [INFO] [OK] Found 3 videos
+[2025-10-13 15:51:15] [INFO]   1. Prompt Engineering Tutorial – Master ChatGPT and LLM Responses (1,083 comments, 2,396,128 views)
+[2025-10-13 15:51:15] [INFO]   2. Why LLMs get dumb (Context Windows Explained) (319 comments, 150,629 views)
+[2025-10-13 15:51:15] [INFO]   3. The Model Context Protocol (MCP) (241 comments, 207,166 views)
+[2025-10-13 15:51:15] [INFO] 
+STEP 3: Extracting transcripts...
+[2025-10-13 15:51:15] [INFO]   Attempting video 1: Prompt Engineering Tutorial – Master ChatGPT and LLM Responses
+[2025-10-13 15:51:15] [INFO]   [FAIL] Video 1: type object 'YouTubeTranscriptApi' has no attribute 'get_transcript'
+[2025-10-13 15:51:15] [INFO]   Attempting video 2: Why LLMs get dumb (Context Windows Explained)
+[2025-10-13 15:51:15] [INFO]   [FAIL] Video 2: type object 'YouTubeTranscriptApi' has no attribute 'get_transcript'
+[2025-10-13 15:51:15] [INFO]   Attempting video 3: The Model Context Protocol (MCP)
+[2025-10-13 15:51:15] [INFO]   [FAIL] Video 3: type object 'YouTubeTranscriptApi' has no attribute 'get_transcript'
+[2025-10-13 15:51:15] [ERROR] ERROR: No videos with transcripts found!
+[2025-10-13 15:52:58] [INFO] Python version: 3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]
+[2025-10-13 15:52:58] [INFO] Working directory: C:\Claude Agent SDK\youtube-article-agent
+[2025-10-13 15:52:58] [INFO] ============================================================
+[2025-10-13 15:52:58] [INFO] YouTube to Article Writer Agent - Direct Execution
+[2025-10-13 15:52:58] [INFO] ============================================================
+[2025-10-13 15:52:58] [INFO] STEP 1: Reading input files...
+[2025-10-13 15:52:58] [INFO] [OK] Topic: context engineering
+[2025-10-13 15:52:58] [INFO] [OK] Article prompt loaded (355 chars)
+[2025-10-13 15:52:58] [INFO] 
+STEP 2: Searching YouTube for 'context engineering'...
+[2025-10-13 15:52:59] [INFO] [OK] Found 3 videos
+[2025-10-13 15:52:59] [INFO]   1. Why LLMs get dumb (Context Windows Explained) (319 comments, 150,629 views)
+[2025-10-13 15:52:59] [INFO]   2. The Model Context Protocol (MCP) (241 comments, 207,167 views)
+[2025-10-13 15:52:59] [INFO]   3. 20 AI Concepts Explained in 40 Minutes (150 comments, 88,331 views)
+[2025-10-13 15:52:59] [INFO] 
+STEP 3: Extracting transcripts...
+[2025-10-13 15:52:59] [INFO]   Attempting video 1: Why LLMs get dumb (Context Windows Explained)
+[2025-10-13 15:53:00] [INFO]   [FAIL] Video 1: 'FetchedTranscriptSnippet' object is not subscriptable
+[2025-10-13 15:53:00] [INFO]   Attempting video 2: The Model Context Protocol (MCP)
+[2025-10-13 15:53:01] [INFO]   [FAIL] Video 2: 'FetchedTranscriptSnippet' object is not subscriptable
+[2025-10-13 15:53:01] [INFO]   Attempting video 3: 20 AI Concepts Explained in 40 Minutes
+[2025-10-13 15:53:02] [INFO]   [FAIL] Video 3: 'FetchedTranscriptSnippet' object is not subscriptable
+[2025-10-13 15:53:02] [ERROR] ERROR: No videos with transcripts found!
+[2025-10-13 15:54:35] [INFO] Python version: 3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]
+[2025-10-13 15:54:35] [INFO] Working directory: C:\Claude Agent SDK\youtube-article-agent
+[2025-10-13 15:54:35] [INFO] ============================================================
+[2025-10-13 15:54:35] [INFO] YouTube to Article Writer Agent - Direct Execution
+[2025-10-13 15:54:35] [INFO] ============================================================
+[2025-10-13 15:54:35] [INFO] STEP 1: Reading input files...
+[2025-10-13 15:54:35] [INFO] [OK] Topic: context engineering
+[2025-10-13 15:54:35] [INFO] [OK] Article prompt loaded (355 chars)
+[2025-10-13 15:54:35] [INFO] 
+STEP 2: Searching YouTube for 'context engineering'...
+[2025-10-13 15:54:36] [INFO] [OK] Found 3 videos
+[2025-10-13 15:54:36] [INFO]   1. Why LLMs get dumb (Context Windows Explained) (319 comments, 150,630 views)
+[2025-10-13 15:54:36] [INFO]   2. The Model Context Protocol (MCP) (241 comments, 207,167 views)
+[2025-10-13 15:54:36] [INFO]   3. 20 AI Concepts Explained in 40 Minutes (150 comments, 88,331 views)
+[2025-10-13 15:54:36] [INFO] 
+STEP 3: Extracting transcripts...
+[2025-10-13 15:54:36] [INFO]   Attempting video 1: Why LLMs get dumb (Context Windows Explained)
+[2025-10-13 15:54:37] [INFO]   [OK] Video 1: Success! (3478 words)
+[2025-10-13 15:54:37] [INFO]   Attempting video 2: The Model Context Protocol (MCP)
+[2025-10-13 15:54:38] [INFO]   [OK] Video 2: Success! (3763 words)
+[2025-10-13 15:54:38] [INFO]   Attempting video 3: 20 AI Concepts Explained in 40 Minutes
+[2025-10-13 15:54:39] [INFO]   [OK] Video 3: Success! (6546 words)
+[2025-10-13 15:54:39] [INFO] 
+[OK] Successfully extracted 3 transcript(s)
+[2025-10-13 15:54:39] [INFO] 
+STEP 4: Generating initial article...
+[2025-10-13 15:54:39] [ERROR] Error generating article: Error generating article: Error code: 404 - {'type': 'error', 'error': {'type': 'not_found_error', 'message': 'model: claude-sonnet-4-0-20250514'}, 'request_id': 'req_011CU5nSgDaDFHBhp5BYHB2X'}
+[2025-10-13 15:56:35] [INFO] Python version: 3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]
+[2025-10-13 15:56:35] [INFO] Working directory: C:\Claude Agent SDK\youtube-article-agent
+[2025-10-13 15:56:35] [INFO] ============================================================
+[2025-10-13 15:56:35] [INFO] YouTube to Article Writer Agent - Direct Execution
+[2025-10-13 15:56:35] [INFO] ============================================================
+[2025-10-13 15:56:35] [INFO] STEP 1: Reading input files...
+[2025-10-13 15:56:35] [INFO] [OK] Topic: context engineering
+[2025-10-13 15:56:35] [INFO] [OK] Article prompt loaded (355 chars)
+[2025-10-13 15:56:35] [INFO] 
+STEP 2: Searching YouTube for 'context engineering'...
+[2025-10-13 15:56:36] [INFO] [OK] Found 3 videos
+[2025-10-13 15:56:36] [INFO]   1. Prompt Engineering Tutorial – Master ChatGPT and LLM Responses (1,083 comments, 2,396,136 views)
+[2025-10-13 15:56:36] [INFO]   2. Why LLMs get dumb (Context Windows Explained) (319 comments, 150,630 views)
+[2025-10-13 15:56:36] [INFO]   3. The Model Context Protocol (MCP) (241 comments, 207,167 views)
+[2025-10-13 15:56:36] [INFO] 
+STEP 3: Extracting transcripts...
+[2025-10-13 15:56:36] [INFO]   Attempting video 1: Prompt Engineering Tutorial – Master ChatGPT and LLM Responses
+[2025-10-13 15:56:37] [INFO]   [OK] Video 1: Success! (6519 words)
+[2025-10-13 15:56:37] [INFO]   Attempting video 2: Why LLMs get dumb (Context Windows Explained)
+[2025-10-13 15:56:38] [INFO]   [OK] Video 2: Success! (3478 words)
+[2025-10-13 15:56:38] [INFO]   Attempting video 3: The Model Context Protocol (MCP)
+[2025-10-13 15:56:39] [INFO]   [OK] Video 3: Success! (3763 words)
+[2025-10-13 15:56:39] [INFO] 
+[OK] Successfully extracted 3 transcript(s)
+[2025-10-13 15:56:39] [INFO] 
+STEP 4: Generating initial article...
+[2025-10-13 15:56:58] [INFO] [OK] Initial article generated (577 words)
+[2025-10-13 15:56:58] [INFO]   Cost: $0.0372
+[2025-10-13 15:56:58] [INFO] 
+STEP 6: Refining article with video 2...
+[2025-10-13 15:57:21] [INFO] [OK] Article refined with video 2 (736 words)
+[2025-10-13 15:57:21] [INFO]   Cost: $0.0327
+[2025-10-13 15:57:21] [INFO] 
+STEP 7: Refining article with video 3...
+[2025-10-13 15:57:43] [INFO] [OK] Article refined with video 3 (668 words)
+[2025-10-13 15:57:43] [INFO]   Cost: $0.0327
+[2025-10-13 15:57:43] [INFO] 
+STEP 8: Generating cost summary...
+[2025-10-13 15:57:43] [ERROR] 
+Fatal error: 'charmap' codec can't encode characters in position 2-47: character maps to <undefined>
+[2025-10-13 15:57:43] [ERROR] Full error details:
+[2025-10-13 15:57:43] [ERROR] Traceback (most recent call last):
+  File "C:\Claude Agent SDK\youtube-article-agent\agent_direct.py", line 210, in main
+    print(cost_result["content"][0]["text"])
+  File "C:\Users\ekano\AppData\Local\Programs\Python\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 2-47: character maps to <undefined>
+
+[2025-10-13 16:02:15] [INFO] Python version: 3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]
+[2025-10-13 16:02:15] [INFO] Working directory: C:\Claude Agent SDK\youtube-article-agent
+[2025-10-13 16:02:15] [INFO] ============================================================
+[2025-10-13 16:02:15] [INFO] YouTube to Article Writer Agent - Direct Execution
+[2025-10-13 16:02:15] [INFO] ============================================================
+[2025-10-13 16:02:15] [INFO] STEP 1: Reading input files...
+[2025-10-13 16:02:15] [INFO] [OK] Topic: context engineering
+[2025-10-13 16:02:15] [INFO] [OK] Article prompt loaded (355 chars)
+[2025-10-13 16:02:15] [INFO] 
+STEP 2: Searching YouTube for 'context engineering'...
+[2025-10-13 16:02:16] [INFO] [OK] Found 3 videos
+[2025-10-13 16:02:16] [INFO]   1. Prompt Engineering Tutorial – Master ChatGPT and LLM Responses (1,083 comments, 2,396,147 views)
+[2025-10-13 16:02:16] [INFO]   2. Why LLMs get dumb (Context Windows Explained) (319 comments, 150,630 views)
+[2025-10-13 16:02:16] [INFO]   3. The Model Context Protocol (MCP) (241 comments, 207,167 views)
+[2025-10-13 16:02:16] [INFO] 
+STEP 3: Extracting transcripts...
+[2025-10-13 16:02:16] [INFO]   Attempting video 1: Prompt Engineering Tutorial – Master ChatGPT and LLM Responses
+[2025-10-13 16:02:17] [INFO]   [OK] Video 1: Success! (6519 words)
+[2025-10-13 16:02:18] [INFO]   Attempting video 2: Why LLMs get dumb (Context Windows Explained)
+[2025-10-13 16:02:18] [INFO]   [OK] Video 2: Success! (3478 words)
+[2025-10-13 16:02:18] [INFO]   Attempting video 3: The Model Context Protocol (MCP)
+[2025-10-13 16:02:20] [INFO]   [OK] Video 3: Success! (3763 words)
+[2025-10-13 16:02:20] [INFO] 
+[OK] Successfully extracted 3 transcript(s)
+[2025-10-13 16:02:20] [INFO] 
+STEP 4: Generating initial article...
+[2025-10-13 16:02:39] [INFO] [OK] Initial article generated (639 words)
+[2025-10-13 16:02:39] [INFO]   Cost: $0.0383
+[2025-10-13 16:02:39] [INFO] 
+STEP 6: Refining article with video 2...
+[2025-10-13 16:02:57] [INFO] [OK] Article refined with video 2 (526 words)
+[2025-10-13 16:02:57] [INFO]   Cost: $0.0289
+[2025-10-13 16:02:57] [INFO] 
+STEP 7: Refining article with video 3...
+[2025-10-13 16:03:17] [INFO] [OK] Article refined with video 3 (580 words)
+[2025-10-13 16:03:17] [INFO]   Cost: $0.0299
+[2025-10-13 16:03:17] [INFO] 
+STEP 8: Generating cost summary...
+[2025-10-13 16:03:17] [INFO] Total Cost: $0.0971
+[2025-10-13 16:03:17] [INFO] Total Input Tokens: 19,989
+[2025-10-13 16:03:17] [INFO] Total Output Tokens: 2,477
+[2025-10-13 16:03:17] [INFO] 
+STEP 9: Saving final article...
+[2025-10-13 16:03:17] [INFO] [OK] Article saved to: C:\Claude Agent SDK\youtube-article-agent\output\article.md
+[2025-10-13 16:03:17] [INFO] 
+============================================================
+[2025-10-13 16:03:17] [INFO] [OK] WORKFLOW COMPLETED SUCCESSFULLY!
+[2025-10-13 16:03:17] [INFO] ============================================================
+[2025-10-13 16:03:17] [INFO] Videos processed: 3
+[2025-10-13 16:03:17] [INFO] Final article length: 4049 characters
+[2025-10-13 16:03:17] [INFO] Total cost: $0.0971
+[2025-10-13 16:03:17] [INFO] Output: C:\Claude Agent SDK\youtube-article-agent\output\article.md
+[2025-10-13 16:03:17] [INFO] ============================================================
+[2025-10-13 16:17:40] [INFO] Python version: 3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]
+[2025-10-13 16:17:40] [INFO] Working directory: C:\Claude Agent SDK\youtube-article-agent
+[2025-10-13 16:17:40] [INFO] ============================================================
+[2025-10-13 16:17:40] [INFO] YouTube to Article Writer Agent - Direct Execution
+[2025-10-13 16:17:40] [INFO] ============================================================
+[2025-10-13 16:17:40] [INFO] STEP 1: Reading input files...
+[2025-10-13 16:17:40] [INFO] [OK] Topic: context engineering
+[2025-10-13 16:17:40] [INFO] [OK] Article prompt loaded (355 chars)
+[2025-10-13 16:17:40] [INFO] 
+STEP 2: Searching YouTube for 'context engineering'...
+[2025-10-13 16:17:41] [INFO] [OK] Found 3 videos
+[2025-10-13 16:17:41] [INFO]   1. Prompt Engineering Tutorial – Master ChatGPT and LLM Responses (1,083 comments, 2,396,159 views)
+[2025-10-13 16:17:41] [INFO]   2. Why LLMs get dumb (Context Windows Explained) (319 comments, 150,630 views)
+[2025-10-13 16:17:41] [INFO]   3. The Model Context Protocol (MCP) (241 comments, 207,167 views)
+[2025-10-13 16:17:41] [INFO] 
+STEP 3: Extracting transcripts...
+[2025-10-13 16:17:41] [INFO]   Attempting video 1: Prompt Engineering Tutorial – Master ChatGPT and LLM Responses
+[2025-10-13 16:17:42] [INFO]   [OK] Video 1: Success! (6519 words)
+[2025-10-13 16:17:42] [INFO]   Attempting video 2: Why LLMs get dumb (Context Windows Explained)
+[2025-10-13 16:17:43] [INFO]   [OK] Video 2: Success! (3478 words)
+[2025-10-13 16:17:43] [INFO]   Attempting video 3: The Model Context Protocol (MCP)
+[2025-10-13 16:17:44] [INFO]   [OK] Video 3: Success! (3763 words)
+[2025-10-13 16:17:44] [INFO] 
+[OK] Successfully extracted 3 transcript(s)
+[2025-10-13 16:17:44] [INFO] 
+STEP 4: Generating initial article...
+[2025-10-13 16:21:02] [INFO] Python version: 3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]
+[2025-10-13 16:21:02] [INFO] Working directory: C:\Claude Agent SDK\youtube-article-agent
+[2025-10-13 16:21:02] [INFO] ============================================================
+[2025-10-13 16:21:02] [INFO] YouTube to Article Writer Agent - Direct Execution
+[2025-10-13 16:21:02] [INFO] ============================================================
+[2025-10-13 16:21:02] [INFO] STEP 1: Reading input files...
+[2025-10-13 16:21:02] [INFO] [OK] Topic: context engineering
+[2025-10-13 16:21:02] [INFO] [OK] Article prompt loaded (355 chars)
+[2025-10-13 16:21:02] [INFO] 
+STEP 2: Searching YouTube for 'context engineering'...
+[2025-10-13 16:21:02] [INFO] [OK] Found 3 videos
+[2025-10-13 16:21:02] [INFO]   1. Prompt Engineering Tutorial – Master ChatGPT and LLM Responses (1,083 comments, 2,396,159 views)
+[2025-10-13 16:21:02] [INFO]   2. Why LLMs get dumb (Context Windows Explained) (319 comments, 150,630 views)
+[2025-10-13 16:21:02] [INFO]   3. The Model Context Protocol (MCP) (241 comments, 207,167 views)
+[2025-10-13 16:21:02] [INFO] 
+STEP 3: Extracting transcripts...
+[2025-10-13 16:21:02] [INFO]   Attempting video 1: Prompt Engineering Tutorial – Master ChatGPT and LLM Responses
+[2025-10-13 16:21:04] [INFO]   [OK] Video 1: Success! (6519 words)
+[2025-10-13 16:21:04] [INFO]   Attempting video 2: Why LLMs get dumb (Context Windows Explained)
+[2025-10-13 16:21:04] [INFO]   [OK] Video 2: Success! (3478 words)
+[2025-10-13 16:21:04] [INFO]   Attempting video 3: The Model Context Protocol (MCP)
+[2025-10-13 16:21:06] [INFO]   [OK] Video 3: Success! (3763 words)
+[2025-10-13 16:21:06] [INFO] 
+[OK] Successfully extracted 3 transcript(s)
+[2025-10-13 16:21:06] [INFO] 
+STEP 4: Generating initial article...
+[2025-10-13 16:23:11] [INFO] [OK] Initial article generated (3285 words)
+[2025-10-13 16:23:11] [INFO]   Cost: $0.0891
+[2025-10-13 16:23:11] [INFO] 
+STEP 6: Refining article with video 2...
+[2025-10-13 16:26:08] [INFO] [OK] Article refined with video 2 (4477 words)
+[2025-10-13 16:26:08] [INFO]   Cost: $0.1150
+[2025-10-13 16:26:08] [INFO] 
+STEP 7: Refining article with video 3...
+[2025-10-13 16:29:47] [INFO] [OK] Article refined with video 3 (5420 words)
+[2025-10-13 16:29:47] [INFO]   Cost: $0.1388
+[2025-10-13 16:29:47] [INFO] 
+STEP 8: Generating cost summary...
+[2025-10-13 16:29:47] [INFO] Total Cost: $0.3429
+[2025-10-13 16:29:47] [INFO] Total Input Tokens: 28,559
+[2025-10-13 16:29:47] [INFO] Total Output Tokens: 17,148
+[2025-10-13 16:29:47] [INFO] 
+STEP 9: Saving final article...
+[2025-10-13 16:29:47] [INFO] [OK] Article saved to: C:\Claude Agent SDK\youtube-article-agent\output\article_20251013_162947.md
+[2025-10-13 16:29:47] [INFO] 
+============================================================
+[2025-10-13 16:29:47] [INFO] [OK] WORKFLOW COMPLETED SUCCESSFULLY!
+[2025-10-13 16:29:47] [INFO] ============================================================
+[2025-10-13 16:29:47] [INFO] Videos processed: 3
+[2025-10-13 16:29:47] [INFO] Final article length: 32316 characters
+[2025-10-13 16:29:47] [INFO] Total cost: $0.3429
+[2025-10-13 16:29:47] [INFO] Output: C:\Claude Agent SDK\youtube-article-agent\output\article_20251013_162947.md
+[2025-10-13 16:29:47] [INFO] ============================================================

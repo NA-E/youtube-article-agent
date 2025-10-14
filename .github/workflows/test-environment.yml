@@ -1,0 +1,147 @@
+name: Test Environment Setup
+
+# This is a test workflow to verify all dependencies install correctly
+# Run this first before setting up the scheduled workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-setup:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Display Python version
+      run: |
+        python --version
+        pip --version
+
+    - name: Install dependencies
+      run: |
+        pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: List installed packages
+      run: |
+        pip list
+
+    - name: Test imports
+      run: |
+        python -c "
+        import sys
+        print('Testing imports...')
+
+        # Test all required imports
+        try:
+            import anthropic
+            print('✓ anthropic')
+        except ImportError as e:
+            print(f'✗ anthropic: {e}')
+            sys.exit(1)
+
+        try:
+            from youtube_transcript_api import YouTubeTranscriptApi
+            print('✓ youtube_transcript_api')
+        except ImportError as e:
+            print(f'✗ youtube_transcript_api: {e}')
+            sys.exit(1)
+
+        try:
+            from googleapiclient.discovery import build
+            print('✓ google-api-python-client')
+        except ImportError as e:
+            print(f'✗ google-api-python-client: {e}')
+            sys.exit(1)
+
+        try:
+            from dotenv import load_dotenv
+            print('✓ python-dotenv')
+        except ImportError as e:
+            print(f'✗ python-dotenv: {e}')
+            sys.exit(1)
+
+        print('')
+        print('All imports successful! ✓')
+        "
+
+    - name: Check file structure
+      run: |
+        echo "Checking required files..."
+        ls -la
+
+        if [ -f "agent_direct.py" ]; then
+          echo "✓ agent_direct.py found"
+        else
+          echo "✗ agent_direct.py missing"
+          exit 1
+        fi
+
+        if [ -f "topic.txt" ]; then
+          echo "✓ topic.txt found"
+        else
+          echo "✗ topic.txt missing"
+          exit 1
+        fi
+
+        if [ -f "article_prompt.txt" ]; then
+          echo "✓ article_prompt.txt found"
+        else
+          echo "✗ article_prompt.txt missing"
+          exit 1
+        fi
+
+        if [ -d "tools" ]; then
+          echo "✓ tools/ directory found"
+          ls -la tools/
+        else
+          echo "✗ tools/ directory missing"
+          exit 1
+        fi
+
+    - name: Test Python syntax
+      run: |
+        echo "Checking Python syntax..."
+        python -m py_compile agent_direct.py
+        echo "✓ agent_direct.py syntax OK"
+
+        python -m py_compile tools/*.py
+        echo "✓ All tool files syntax OK"
+
+    - name: Verify environment variables (without values)
+      env:
+        YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      run: |
+        echo "Checking environment variables..."
+
+        if [ -z "$YOUTUBE_API_KEY" ]; then
+          echo "⚠ YOUTUBE_API_KEY not set in secrets"
+          echo "Go to Settings → Secrets and variables → Actions to add it"
+        else
+          echo "✓ YOUTUBE_API_KEY is set"
+        fi
+
+        if [ -z "$ANTHROPIC_API_KEY" ]; then
+          echo "⚠ ANTHROPIC_API_KEY not set in secrets"
+          echo "Go to Settings → Secrets and variables → Actions to add it"
+        else
+          echo "✓ ANTHROPIC_API_KEY is set"
+        fi
+
+    - name: Summary
+      run: |
+        echo ""
+        echo "================================"
+        echo "Environment Test Complete!"
+        echo "================================"
+        echo ""
+        echo "If all checks passed, your environment is ready!"
+        echo "You can now use the 'Generate YouTube Article' workflow."

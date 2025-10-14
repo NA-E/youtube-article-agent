@@ -1,0 +1,99 @@
+name: Generate YouTube Article
+
+on:
+  # Schedule to run daily at 9 AM UTC (adjust as needed)
+  schedule:
+    - cron: '0 9 * * *'  # Every day at 9 AM UTC
+
+  # Allow manual trigger from GitHub UI
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: 'Override topic (leave empty to use topic.txt)'
+        required: false
+        default: ''
+
+jobs:
+  generate-article:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+        cache: 'pip'
+
+    - name: Install dependencies
+      run: |
+        pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Override topic if provided
+      if: github.event.inputs.topic != ''
+      run: |
+        echo "${{ github.event.inputs.topic }}" > topic.txt
+
+    - name: Run agent
+      env:
+        YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      run: |
+        python agent_direct.py
+
+    - name: Get current date
+      id: date
+      run: echo "date=$(date +'%Y-%m-%d-%H%M')" >> $GITHUB_OUTPUT
+
+    - name: Commit and push article
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+
+        # Add all output files (includes timestamped backups)
+        git add output/ logs/ || true
+
+        # Check if there are changes to commit
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "Auto-generated article: ${{ steps.date.outputs.date }}"
+          git push
+        fi
+
+    - name: Upload article as artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: article-${{ steps.date.outputs.date }}
+        path: |
+          output/article_*.md
+          logs/agent_log.txt
+        retention-days: 30
+
+    - name: Display cost summary
+      run: |
+        echo "## Article Generation Complete! 🎉" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "**Generated:** ${{ steps.date.outputs.date }}" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+
+        # Find the most recent final article (not draft)
+        latest_article=$(ls -t output/article_*.md 2>/dev/null | grep -v 'draft' | head -1)
+        if [ -n "$latest_article" ]; then
+          word_count=$(wc -w < "$latest_article")
+          echo "**Final Article:** $(basename $latest_article)" >> $GITHUB_STEP_SUMMARY
+          echo "**Word Count:** $word_count words" >> $GITHUB_STEP_SUMMARY
+        fi
+
+        # Show draft exists
+        if [ -f "output/article_draft.md" ]; then
+          echo "**Draft:** article_draft.md (overwritten each run)" >> $GITHUB_STEP_SUMMARY
+        fi
+
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "Check the logs for cost details and video sources." >> $GITHUB_STEP_SUMMARY

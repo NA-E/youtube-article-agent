@@ -1,0 +1,3 @@
+# Article Writing Prompt
+
+Write an article from this video. Use the original voice of the creator such as s/he wrote it. Use as many direct lines from transcript as possible, but should not sound like a transcript. All action items, values, fact, info, everything valuable should be in it. It should sound like the exact blog version of the youtube video.
