@@ -65,8 +65,15 @@ async def main():
             log(f"Error reading inputs: {inputs_result['content'][0]['text']}", level="ERROR")
             return
 
-        topic = inputs_result["topic"]
-        article_prompt = inputs_result["article_prompt"]
+        # Defensive KeyError handling: ensure expected fields exist
+        try:
+            topic = inputs_result["topic"]
+            article_prompt = inputs_result["article_prompt"]
+        except KeyError as e:
+            log(f"Error: Input result missing expected field: {e}", level="ERROR")
+            log(f"Available fields: {list(inputs_result.keys())}", level="ERROR")
+            return
+
         log(f"[OK] Topic: {topic}")
         log(f"[OK] Article prompt loaded ({len(article_prompt)} chars)")
 
@@ -78,7 +85,14 @@ async def main():
             log(f"Error searching YouTube: {search_result['content'][0]['text']}", level="ERROR")
             return
 
-        videos = search_result["videos"]
+        # Defensive KeyError handling: ensure videos field exists
+        try:
+            videos = search_result["videos"]
+        except KeyError as e:
+            log(f"Error: Search result missing 'videos' field: {e}", level="ERROR")
+            log(f"Available fields: {list(search_result.keys())}", level="ERROR")
+            return
+
         log(f"[OK] Found {len(videos)} videos")
         for i, video in enumerate(videos, 1):
             log(f"  {i}. {video['title']} ({video['comments']:,} comments, {video['views']:,} views)")
@@ -95,12 +109,18 @@ async def main():
             })
 
             if transcript_result.get("success"):
-                successful_transcripts.append({
-                    "video": video,
-                    "transcript": transcript_result["transcript"],
-                    "word_count": transcript_result["word_count"]
-                })
-                log(f"  [OK] Video {i}: Success! ({transcript_result['word_count']} words)")
+                # Defensive KeyError handling: ensure transcript fields exist
+                try:
+                    successful_transcripts.append({
+                        "video": video,
+                        "transcript": transcript_result["transcript"],
+                        "word_count": transcript_result["word_count"]
+                    })
+                    log(f"  [OK] Video {i}: Success! ({transcript_result['word_count']} words)")
+                except KeyError as e:
+                    log(f"  [WARNING] Transcript result missing field: {e}", level="WARNING")
+                    log(f"  Available fields: {list(transcript_result.keys())}", level="WARNING")
+                    # Don't add to successful_transcripts, continue to next video
             else:
                 log(f"  [FAIL] Video {i}: {transcript_result.get('error', 'Failed')}")
 
@@ -126,9 +146,18 @@ async def main():
             log(f"Error generating article: {gen_result['content'][0]['text']}", level="ERROR")
             return
 
-        current_article = gen_result["article"]
-        log(f"[OK] Initial article generated ({gen_result['word_count']} words)")
-        log(f"  Cost: ${gen_result['cost']:.4f}")
+        # Defensive KeyError handling: ensure article generation fields exist
+        try:
+            current_article = gen_result["article"]
+            word_count = gen_result["word_count"]
+            cost = gen_result["cost"]
+        except KeyError as e:
+            log(f"Error: Article generation result missing field: {e}", level="ERROR")
+            log(f"Available fields: {list(gen_result.keys())}", level="ERROR")
+            return
+
+        log(f"[OK] Initial article generated ({word_count} words)")
+        log(f"  Cost: ${cost:.4f}")
 
         # Save draft after initial generation
         video_sources_draft = [{
@@ -173,9 +202,18 @@ async def main():
             })
 
             if refine_result.get("success"):
-                current_article = refine_result["article"]
-                log(f"[OK] Article refined with video 2 ({refine_result['word_count']} words)")
-                log(f"  Cost: ${refine_result['cost']:.4f}")
+                # Defensive KeyError handling: ensure refinement fields exist
+                try:
+                    current_article = refine_result["article"]
+                    word_count = refine_result["word_count"]
+                    cost = refine_result["cost"]
+                except KeyError as e:
+                    log(f"Warning: Refinement result missing field: {e}", level="WARNING")
+                    log(f"Available fields: {list(refine_result.keys())}", level="WARNING")
+                    log(f"Continuing with current article version...", level="WARNING")
+                else:
+                    log(f"[OK] Article refined with video 2 ({word_count} words)")
+                    log(f"  Cost: ${cost:.4f}")
 
                 # Update draft with 2 videos
                 video_sources_draft = []
@@ -199,10 +237,11 @@ async def main():
                 })
                 log(f"[OK] Draft updated with video 2")
 
+                # Only track cost if we successfully extracted the fields
                 await track_cost({
                     "input_tokens": refine_result["input_tokens"],
                     "output_tokens": refine_result["output_tokens"],
-                    "cost": refine_result["cost"],
+                    "cost": cost,
                     "operation": "Refinement with video 2"
                 })
             else:
@@ -225,9 +264,18 @@ async def main():
             })
 
             if refine_result.get("success"):
-                current_article = refine_result["article"]
-                log(f"[OK] Article refined with video 3 ({refine_result['word_count']} words)")
-                log(f"  Cost: ${refine_result['cost']:.4f}")
+                # Defensive KeyError handling: ensure refinement fields exist
+                try:
+                    current_article = refine_result["article"]
+                    word_count = refine_result["word_count"]
+                    cost = refine_result["cost"]
+                except KeyError as e:
+                    log(f"Warning: Refinement result missing field: {e}", level="WARNING")
+                    log(f"Available fields: {list(refine_result.keys())}", level="WARNING")
+                    log(f"Continuing with current article version...", level="WARNING")
+                else:
+                    log(f"[OK] Article refined with video 3 ({word_count} words)")
+                    log(f"  Cost: ${cost:.4f}")
 
                 # Update draft with 3 videos
                 video_sources_draft = []
@@ -251,10 +299,11 @@ async def main():
                 })
                 log(f"[OK] Draft updated with video 3")
 
+                # Only track cost if we successfully extracted the fields
                 await track_cost({
                     "input_tokens": refine_result["input_tokens"],
                     "output_tokens": refine_result["output_tokens"],
-                    "cost": refine_result["cost"],
+                    "cost": cost,
                     "operation": "Refinement with video 3"
                 })
             else:
@@ -340,6 +389,13 @@ if __name__ == "__main__":
     if not os.getenv("YOUTUBE_API_KEY"):
         log("ERROR: YOUTUBE_API_KEY not found in environment", level="ERROR")
         log("Please set YOUTUBE_API_KEY in your .env file", level="ERROR")
+        sys.exit(1)
+
+    if not os.getenv("RAPIDAPI_KEY"):
+        log("ERROR: RAPIDAPI_KEY not found in environment", level="ERROR")
+        log("Please set RAPIDAPI_KEY in your .env file", level="ERROR")
+        log("Sign up at: https://rapidapi.com/", level="ERROR")
+        log("Subscribe to: https://rapidapi.com/mivano94/api/youtube-transcript3", level="ERROR")
         sys.exit(1)
 
     # Run the agent

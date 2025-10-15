@@ -2,6 +2,7 @@
 YouTube search tool using YouTube Data API v3.
 """
 import os
+import asyncio
 from typing import Any
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
@@ -63,7 +64,12 @@ async def search_youtube(args: dict[str, Any]) -> dict[str, Any]:
             order="relevance"
         )
 
-        search_response = search_request.execute()
+        # Run blocking YouTube API call in thread pool to avoid blocking event loop
+        loop = asyncio.get_event_loop()
+        search_response = await loop.run_in_executor(
+            None,  # Use default ThreadPoolExecutor
+            search_request.execute
+        )
 
         if not search_response.get('items'):
             return {
@@ -83,7 +89,11 @@ async def search_youtube(args: dict[str, Any]) -> dict[str, Any]:
             id=','.join(video_ids)
         )
 
-        videos_response = videos_request.execute()
+        # Run blocking YouTube API call in thread pool to avoid blocking event loop
+        videos_response = await loop.run_in_executor(
+            None,  # Use default ThreadPoolExecutor
+            videos_request.execute
+        )
 
         # Process and sort videos
         videos = []

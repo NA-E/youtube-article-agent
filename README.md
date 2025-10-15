@@ -37,6 +37,18 @@ pip install -r requirements.txt
 YOUTUBE_API_KEY=your_actual_api_key_here
 ```
 
+**RapidAPI Key (Required):**
+1. Sign up at [RapidAPI](https://rapidapi.com/)
+2. Subscribe to [YouTube Transcript3 API](https://rapidapi.com/mivano94/api/youtube-transcript3)
+   - Free tier available (check current limits on RapidAPI)
+   - Usually 100-500 requests/month free
+3. Copy your RapidAPI key from the dashboard
+4. Add the key to `.env` file:
+
+```bash
+RAPIDAPI_KEY=your_rapidapi_key_here
+```
+
 **Anthropic API Key:**
 - Already set in your system environment variables
 
@@ -94,15 +106,19 @@ The agent will:
 ```
 youtube-article-agent/
 ├── agent.py                         # Main agent implementation
+├── agent_direct.py                  # Direct execution (no SDK loop)
 ├── tools/                           # Custom tools directory
 │   ├── __init__.py                 # Tools package
 │   ├── file_handler.py             # Read inputs & save outputs
 │   ├── youtube_search.py           # YouTube search via API
-│   ├── transcript_fetcher.py       # Extract transcripts
-│   └── article_generator.py        # Generate & refine articles
+│   ├── transcript_fetcher.py       # Extract transcripts via RapidAPI
+│   ├── transcript_cleaner.py       # Clean and process transcripts
+│   ├── article_generator.py        # Generate & refine articles
+│   └── cost_tracker.py             # Track API costs
 ├── topic.txt                        # INPUT: Your search topic
 ├── article_prompt.txt               # INPUT: Writing style instructions
 ├── .env                             # API keys configuration
+├── .env.example                     # Example env configuration
 ├── output/
 │   └── article.md                   # OUTPUT: Final article
 ├── logs/
@@ -170,9 +186,10 @@ The agent operates autonomously through these steps:
 
 ### 3. get_transcript
 - **Purpose:** Extract English transcript from YouTube video
-- **Library:** Uses `youtube-transcript-api` (free, no API key needed)
-- **Languages:** Supports en, en-US, en-GB variants
-- **Error Handling:** Gracefully handles disabled transcripts, unavailable videos, rate limits
+- **Service:** Uses RapidAPI YouTube Transcript3 API
+- **Processing:** Automatically cleans and adds punctuation to transcripts
+- **Features:** HTML entity decoding, whitespace normalization, sentence detection
+- **Error Handling:** Gracefully handles disabled transcripts, unavailable videos, API errors
 
 ### 4. generate_initial_article
 - **Purpose:** Create first draft from Video 1 transcript
@@ -196,13 +213,20 @@ The agent operates autonomously through these steps:
 
 **Per Article Execution:**
 - YouTube API: $0 (within free tier, 10,000 units/day)
-- Transcript Extraction: $0 (free library)
+- RapidAPI Transcript Extraction: $0 (if within free tier, typically 100-500 requests/month)
 - Claude API (3 calls): ~$0.03
-- **Total: ~$0.03 per article**
+- **Total: ~$0.03 per article (assuming free tier usage)**
 
-**Claude 3.5 Haiku Pricing:**
-- Input: $0.25 per million tokens
-- Output: $1.25 per million tokens
+**Cost Breakdown by Service:**
+- **RapidAPI YouTube Transcript3:** Check current pricing on RapidAPI (free tier available)
+- **Claude 3.5 Haiku:**
+  - Input: $0.25 per million tokens
+  - Output: $1.25 per million tokens
+
+**Monthly Cost Estimate (30 articles):**
+- RapidAPI: $0 (within typical free tier of 100-500 requests)
+- Claude API: ~$0.90/month
+- **Total: ~$0.90/month for daily articles**
 
 ## Troubleshooting
 
@@ -220,13 +244,23 @@ The agent operates autonomously through these steps:
 
 ### Transcript Extraction Issues
 
-**"No English transcript found"**
+**Error: "RAPIDAPI_KEY not set"**
+- Solution: Add your RapidAPI key to `.env` file
+- Sign up at: https://rapidapi.com/
+- Subscribe to: https://rapidapi.com/mivano94/api/youtube-transcript3
+
+**"No transcript available"**
 - This is normal - some videos don't have captions
 - The agent will automatically skip to the next video
 
-**"Transcripts are disabled"**
-- Creator disabled captions on the video
-- Agent skips to next video automatically
+**RapidAPI quota exceeded**
+- Free tier limits reached (typically 100-500 requests/month)
+- Solution: Wait for monthly reset or upgrade to paid tier
+
+**RapidAPI request failed**
+- Check that RAPIDAPI_KEY is correct
+- Verify you're subscribed to YouTube Transcript3 API
+- Check RapidAPI dashboard for service status
 
 ### Article Generation Issues
 

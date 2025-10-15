@@ -3,12 +3,12 @@ Article generation and refinement tools using Claude API.
 """
 import os
 from typing import Any
-from anthropic import Anthropic
+from anthropic import AsyncAnthropic
 from claude_agent_sdk import tool
 
 
-# Initialize Anthropic client
-client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+# Initialize Anthropic async client (prevents blocking event loop)
+client = AsyncAnthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 
 
 @tool(
@@ -71,8 +71,8 @@ Create a well-structured article that:
 
 **IMPORTANT:** Output ONLY the article content in markdown format. Do not include any preamble, introduction about what you're doing, or closing remarks. Start directly with the article title/content and end with the conclusion."""
 
-        # Call Claude API
-        message = client.messages.create(
+        # Call Claude API (using async to avoid blocking event loop)
+        message = await client.messages.create(
             model="claude-sonnet-4-20250514",  # Claude Sonnet 4
             max_tokens=8000,
             temperature=0.7,
@@ -188,8 +188,8 @@ Think like an A+ student who attends multiple lectures on the same topic and cre
 
 **IMPORTANT:** Output ONLY the refined article content in markdown format. Do not include any preamble like "I'll help refine..." or "Here's the enhanced version". Do not include any closing remarks. Start directly with the article content and end with the conclusion."""
 
-        # Call Claude API
-        message = client.messages.create(
+        # Call Claude API (using async to avoid blocking event loop)
+        message = await client.messages.create(
             model="claude-sonnet-4-20250514",  # Claude Sonnet 4
             max_tokens=8000,
             temperature=0.7,
