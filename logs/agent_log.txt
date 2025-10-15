@@ -357,3 +357,59 @@ STEP 9: Saving final article...
 [2025-10-13 16:29:47] [INFO] Total cost: $0.3429
 [2025-10-13 16:29:47] [INFO] Output: C:\Claude Agent SDK\youtube-article-agent\output\article_20251013_162947.md
 [2025-10-13 16:29:47] [INFO] ============================================================
+[2025-10-15 13:51:28] [INFO] Python version: 3.10.18 (main, Jun  4 2025, 04:04:42) [GCC 13.3.0]
+[2025-10-15 13:51:28] [INFO] Working directory: /home/runner/work/youtube-article-agent/youtube-article-agent
+[2025-10-15 13:51:28] [INFO] ============================================================
+[2025-10-15 13:51:28] [INFO] YouTube to Article Writer Agent - Direct Execution
+[2025-10-15 13:51:28] [INFO] ============================================================
+[2025-10-15 13:51:28] [INFO] STEP 1: Reading input files...
+[2025-10-15 13:51:28] [INFO] [OK] Topic: Comet Browser
+[2025-10-15 13:51:28] [INFO] [OK] Article prompt loaded (355 chars)
+[2025-10-15 13:51:28] [INFO] 
+STEP 2: Searching YouTube for 'Comet Browser'...
+[2025-10-15 13:51:29] [INFO] [OK] Found 3 videos
+[2025-10-15 13:51:29] [INFO]   1. Perplexity Comet Changed How I Use My Mac (511 comments, 368,704 views)
+[2025-10-15 13:51:29] [INFO]   2. This App is Breaking The Internet! 🤯 (416 comments, 199,666 views)
+[2025-10-15 13:51:29] [INFO]   3. Perplexity CEO Srinivas on Winning Search With AI (393 comments, 486,022 views)
+[2025-10-15 13:51:29] [INFO] 
+STEP 3: Extracting transcripts...
+[2025-10-15 13:51:29] [INFO]   Attempting video 1: Perplexity Comet Changed How I Use My Mac
+[2025-10-15 13:51:30] [INFO]   [FAIL] Video 1: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=KRmDj6RXXMg! This is most likely caused by:
+
+YouTube is blocking requests from your IP. This usually is due to one of the following reasons:
+- You have done too many requests and your IP has been blocked by YouTube
+- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.
+
+There are two things you can do to work around this:
+1. Use proxies to hide your IP address, as explained in the "Working around IP bans" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around-ip-bans-requestblocked-or-ipblocked-exception).
+2. (NOT RECOMMENDED) If you authenticate your requests using cookies, you will be able to continue doing requests for a while. However, YouTube will eventually permanently ban the account that you have used to authenticate with! So only do this if you don't mind your account being banned!
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+[2025-10-15 13:51:30] [INFO]   Attempting video 2: This App is Breaking The Internet! 🤯
+[2025-10-15 13:51:30] [INFO]   [FAIL] Video 2: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=mW8KoNveXt4! This is most likely caused by:
+
+YouTube is blocking requests from your IP. This usually is due to one of the following reasons:
+- You have done too many requests and your IP has been blocked by YouTube
+- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.
+
+There are two things you can do to work around this:
+1. Use proxies to hide your IP address, as explained in the "Working around IP bans" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around-ip-bans-requestblocked-or-ipblocked-exception).
+2. (NOT RECOMMENDED) If you authenticate your requests using cookies, you will be able to continue doing requests for a while. However, YouTube will eventually permanently ban the account that you have used to authenticate with! So only do this if you don't mind your account being banned!
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+[2025-10-15 13:51:30] [INFO]   Attempting video 3: Perplexity CEO Srinivas on Winning Search With AI
+[2025-10-15 13:51:31] [INFO]   [FAIL] Video 3: 
+Could not retrieve a transcript for the video https://www.youtube.com/watch?v=IsScahXkvMk! This is most likely caused by:
+
+YouTube is blocking requests from your IP. This usually is due to one of the following reasons:
+- You have done too many requests and your IP has been blocked by YouTube
+- You are doing requests from an IP belonging to a cloud provider (like AWS, Google Cloud Platform, Azure, etc.). Unfortunately, most IPs from cloud providers are blocked by YouTube.
+
+There are two things you can do to work around this:
+1. Use proxies to hide your IP address, as explained in the "Working around IP bans" section of the README (https://github.com/jdepoix/youtube-transcript-api?tab=readme-ov-file#working-around-ip-bans-requestblocked-or-ipblocked-exception).
+2. (NOT RECOMMENDED) If you authenticate your requests using cookies, you will be able to continue doing requests for a while. However, YouTube will eventually permanently ban the account that you have used to authenticate with! So only do this if you don't mind your account being banned!
+
+If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
+[2025-10-15 13:51:31] [ERROR] ERROR: No videos with transcripts found!
