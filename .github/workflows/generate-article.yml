@@ -45,6 +45,7 @@ jobs:
       env:
         YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
       run: |
         echo "Checking environment variables..."
         if [ -z "$YOUTUBE_API_KEY" ]; then
@@ -61,11 +62,19 @@ jobs:
           echo "✅ ANTHROPIC_API_KEY is set (length: ${#ANTHROPIC_API_KEY})"
         fi
 
+        if [ -z "$RAPIDAPI_KEY" ]; then
+          echo "❌ RAPIDAPI_KEY is NOT set"
+          exit 1
+        else
+          echo "✅ RAPIDAPI_KEY is set (length: ${#RAPIDAPI_KEY})"
+        fi
+
     - name: Run agent
       timeout-minutes: 15  # Fail if agent takes longer than 15 minutes
       env:
         YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
       run: |
         python agent_direct.py
 
