@@ -122,3 +122,11 @@ Anyways, our context window is way too big. We're going to end it right now.
    - Views: 151,304
    - Comments: 319
 
+**Cost Summary:**
+
+- Total Input Tokens: 5,102
+- Total Output Tokens: 3,164
+- Total Tokens: 8,266
+- **Total Cost: $0.0628**
+- Model: Claude Sonnet 4
+
