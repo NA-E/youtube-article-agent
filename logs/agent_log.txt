@@ -413,3 +413,59 @@ There are two things you can do to work around this:
 
 If you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtube_transcript_api you are using and provide the information needed to replicate the error. Also make sure that there are no open issues which already describe your problem!
 [2025-10-15 13:51:31] [ERROR] ERROR: No videos with transcripts found!
+[2025-10-16 07:38:51] [INFO] Python version: 3.10.18 (main, Jun  4 2025, 04:04:42) [GCC 13.3.0]
+[2025-10-16 07:38:51] [INFO] Working directory: /home/runner/work/youtube-article-agent/youtube-article-agent
+[2025-10-16 07:38:51] [INFO] ============================================================
+[2025-10-16 07:38:51] [INFO] YouTube to Article Writer Agent - Direct Execution
+[2025-10-16 07:38:51] [INFO] ============================================================
+[2025-10-16 07:38:51] [INFO] STEP 1: Reading input files...
+[2025-10-16 07:38:51] [INFO] [OK] Topic: Comet Browser
+[2025-10-16 07:38:51] [INFO] [OK] Article prompt loaded (355 chars)
+[2025-10-16 07:38:51] [INFO] 
+STEP 2: Searching YouTube for 'Comet Browser'...
+[2025-10-16 07:38:51] [INFO] [OK] Found 3 videos
+[2025-10-16 07:38:51] [INFO]   1. Perplexity Comet Changed How I Use My Mac (511 comments, 370,116 views)
+[2025-10-16 07:38:51] [INFO]   2. 10 Perplexity Comet Agents to Automate Your Work (AI Browser) (376 comments, 116,603 views)
+[2025-10-16 07:38:51] [INFO]   3. Perplexity CEO Aravind Srinivas: Comet browser is meant to be 'a true personal assistant' (302 comments, 217,323 views)
+[2025-10-16 07:38:51] [INFO] 
+STEP 3: Extracting transcripts...
+[2025-10-16 07:38:51] [INFO]   Attempting video 1: Perplexity Comet Changed How I Use My Mac
+[2025-10-16 07:38:56] [INFO]   [OK] Video 1: Success! (3301 words)
+[2025-10-16 07:38:56] [INFO]   Attempting video 2: 10 Perplexity Comet Agents to Automate Your Work (AI Browser)
+[2025-10-16 07:39:00] [INFO]   [OK] Video 2: Success! (3113 words)
+[2025-10-16 07:39:00] [INFO]   Attempting video 3: Perplexity CEO Aravind Srinivas: Comet browser is meant to be 'a true personal assistant'
+[2025-10-16 07:39:02] [INFO]   [OK] Video 3: Success! (1212 words)
+[2025-10-16 07:39:02] [INFO] 
+[OK] Successfully extracted 3 transcript(s)
+[2025-10-16 07:39:02] [INFO] 
+STEP 4: Generating initial article...
+[2025-10-16 07:40:53] [INFO] [OK] Initial article generated (2996 words)
+[2025-10-16 07:40:53] [INFO]   Cost: $0.0709
+[2025-10-16 07:40:53] [INFO] [OK] Draft saved: article_draft.md
+[2025-10-16 07:40:53] [INFO] 
+STEP 6: Refining article with video 2...
+[2025-10-16 07:44:46] [INFO] [OK] Article refined with video 2 (5649 words)
+[2025-10-16 07:44:46] [INFO]   Cost: $0.1292
+[2025-10-16 07:44:46] [INFO] [OK] Draft updated with video 2
+[2025-10-16 07:44:46] [INFO] 
+STEP 7: Refining article with video 3...
+[2025-10-16 07:49:23] [INFO] [OK] Article refined with video 3 (6398 words)
+[2025-10-16 07:49:23] [INFO]   Cost: $0.1471
+[2025-10-16 07:49:23] [INFO] [OK] Draft updated with video 3
+[2025-10-16 07:49:23] [INFO] 
+STEP 8: Generating cost summary...
+[2025-10-16 07:49:23] [INFO] Total Cost: $0.3472
+[2025-10-16 07:49:23] [INFO] Total Input Tokens: 21,622
+[2025-10-16 07:49:23] [INFO] Total Output Tokens: 18,820
+[2025-10-16 07:49:23] [INFO] 
+STEP 9: Saving final article...
+[2025-10-16 07:49:23] [INFO] [OK] Article saved to: /home/runner/work/youtube-article-agent/youtube-article-agent/output/article_comet_browser_20251016_074923.md
+[2025-10-16 07:49:23] [INFO] 
+============================================================
+[2025-10-16 07:49:23] [INFO] [OK] WORKFLOW COMPLETED SUCCESSFULLY!
+[2025-10-16 07:49:23] [INFO] ============================================================
+[2025-10-16 07:49:23] [INFO] Videos processed: 3
+[2025-10-16 07:49:23] [INFO] Final article length: 35391 characters
+[2025-10-16 07:49:23] [INFO] Total cost: $0.3472
+[2025-10-16 07:49:23] [INFO] Output: /home/runner/work/youtube-article-agent/youtube-article-agent/output/article_comet_browser_20251016_074923.md
+[2025-10-16 07:49:23] [INFO] ============================================================
