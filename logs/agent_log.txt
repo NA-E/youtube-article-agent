@@ -631,3 +631,59 @@ STEP 9: Saving final article...
 [2025-10-18 09:17:16] [INFO] Total cost: $0.2601
 [2025-10-18 09:17:16] [INFO] Output: /home/runner/work/youtube-article-agent/youtube-article-agent/output/article_context_engineering_20251018_091716.md
 [2025-10-18 09:17:16] [INFO] ============================================================
+[2025-10-19 09:10:41] [INFO] Python version: 3.10.19 (main, Oct 10 2025, 01:01:37) [GCC 13.3.0]
+[2025-10-19 09:10:41] [INFO] Working directory: /home/runner/work/youtube-article-agent/youtube-article-agent
+[2025-10-19 09:10:41] [INFO] ============================================================
+[2025-10-19 09:10:41] [INFO] YouTube to Article Writer Agent - Direct Execution
+[2025-10-19 09:10:41] [INFO] ============================================================
+[2025-10-19 09:10:41] [INFO] STEP 1: Reading input files...
+[2025-10-19 09:10:41] [INFO] [OK] Topic: context engineering
+[2025-10-19 09:10:41] [INFO] [OK] Article prompt loaded (355 chars)
+[2025-10-19 09:10:41] [INFO] 
+STEP 2: Searching YouTube for 'context engineering'...
+[2025-10-19 09:10:42] [INFO] [OK] Found 3 videos
+[2025-10-19 09:10:42] [INFO]   1. Why MCP really is a big deal | Model Context Protocol with Tim Berglund (739 comments, 575,378 views)
+[2025-10-19 09:10:42] [INFO]   2. Stanford's Practical Guide to 10x Your AI Productivity | Jeremy Utley (426 comments, 399,431 views)
+[2025-10-19 09:10:42] [INFO]   3. Why LLMs get dumb (Context Windows Explained) (318 comments, 152,042 views)
+[2025-10-19 09:10:42] [INFO] 
+STEP 3: Extracting transcripts...
+[2025-10-19 09:10:42] [INFO]   Attempting video 1: Why MCP really is a big deal | Model Context Protocol with Tim Berglund
+[2025-10-19 09:10:44] [INFO]   [OK] Video 1: Success! (1936 words)
+[2025-10-19 09:10:44] [INFO]   Attempting video 2: Stanford's Practical Guide to 10x Your AI Productivity | Jeremy Utley
+[2025-10-19 09:10:45] [INFO]   [OK] Video 2: Success! (4559 words)
+[2025-10-19 09:10:45] [INFO]   Attempting video 3: Why LLMs get dumb (Context Windows Explained)
+[2025-10-19 09:10:47] [INFO]   [OK] Video 3: Success! (3459 words)
+[2025-10-19 09:10:47] [INFO] 
+[OK] Successfully extracted 3 transcript(s)
+[2025-10-19 09:10:47] [INFO] 
+STEP 4: Generating initial article...
+[2025-10-19 09:11:15] [INFO] [OK] Initial article generated (2058 words)
+[2025-10-19 09:11:15] [INFO]   Cost: $0.0491
+[2025-10-19 09:11:15] [INFO] [OK] Draft saved: article_draft.md
+[2025-10-19 09:11:15] [INFO] 
+STEP 6: Refining article with video 2...
+[2025-10-19 09:13:39] [INFO] [OK] Article refined with video 2 (3380 words)
+[2025-10-19 09:13:39] [INFO]   Cost: $0.0927
+[2025-10-19 09:13:39] [INFO] [OK] Draft updated with video 2
+[2025-10-19 09:13:39] [INFO] 
+STEP 7: Refining article with video 3...
+[2025-10-19 09:16:42] [INFO] [OK] Article refined with video 3 (4323 words)
+[2025-10-19 09:16:42] [INFO]   Cost: $0.1136
+[2025-10-19 09:16:42] [INFO] [OK] Draft updated with video 3
+[2025-10-19 09:16:42] [INFO] 
+STEP 8: Generating cost summary...
+[2025-10-19 09:16:42] [INFO] Total Cost: $0.2555
+[2025-10-19 09:16:42] [INFO] Total Input Tokens: 21,530
+[2025-10-19 09:16:42] [INFO] Total Output Tokens: 12,725
+[2025-10-19 09:16:42] [INFO] 
+STEP 9: Saving final article...
+[2025-10-19 09:16:42] [INFO] [OK] Article saved to: /home/runner/work/youtube-article-agent/youtube-article-agent/output/article_context_engineering_20251019_091642.md
+[2025-10-19 09:16:42] [INFO] 
+============================================================
+[2025-10-19 09:16:42] [INFO] [OK] WORKFLOW COMPLETED SUCCESSFULLY!
+[2025-10-19 09:16:42] [INFO] ============================================================
+[2025-10-19 09:16:42] [INFO] Videos processed: 3
+[2025-10-19 09:16:42] [INFO] Final article length: 25413 characters
+[2025-10-19 09:16:42] [INFO] Total cost: $0.2555
+[2025-10-19 09:16:42] [INFO] Output: /home/runner/work/youtube-article-agent/youtube-article-agent/output/article_context_engineering_20251019_091642.md
+[2025-10-19 09:16:42] [INFO] ============================================================

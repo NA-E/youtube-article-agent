@@ -260,3 +260,11 @@ Just remember: when you're building these systems, respect the context window li
    - Views: 152,042
    - Comments: 318
 
+**Cost Summary:**
+
+- Total Input Tokens: 21,530
+- Total Output Tokens: 12,725
+- Total Tokens: 34,255
+- **Total Cost: $0.2555**
+- Model: Claude Sonnet 4
+
