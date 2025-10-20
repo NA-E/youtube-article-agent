@@ -231,3 +231,11 @@ Remember: the crazy thing that I've learned is AI demonstrates 100% of the predo
    - Views: 208,643
    - Comments: 240
 
+**Cost Summary:**
+
+- Total Input Tokens: 25,151
+- Total Output Tokens: 14,451
+- Total Tokens: 39,602
+- **Total Cost: $0.2922**
+- Model: Claude Sonnet 4
+
