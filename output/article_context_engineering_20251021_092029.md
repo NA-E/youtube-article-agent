@@ -217,3 +217,11 @@ It's really important that you exercise through implementing some of the things 
    - Views: 208,789
    - Comments: 240
 
+**Cost Summary:**
+
+- Total Input Tokens: 24,665
+- Total Output Tokens: 13,817
+- Total Tokens: 38,482
+- **Total Cost: $0.2812**
+- Model: Claude Sonnet 4
+
