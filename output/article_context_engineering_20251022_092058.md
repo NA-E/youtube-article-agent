@@ -255,3 +255,11 @@ So check it out, get started, links below with great help. And as always, let me
    - Views: 152,768
    - Comments: 318
 
+**Cost Summary:**
+
+- Total Input Tokens: 22,013
+- Total Output Tokens: 13,577
+- Total Tokens: 35,590
+- **Total Cost: $0.2697**
+- Model: Claude Sonnet 4
+
