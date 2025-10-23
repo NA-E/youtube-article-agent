@@ -290,3 +290,11 @@ Here's how the workflow might work:
    - Views: 406,198
    - Comments: 432
 
+**Cost Summary:**
+
+- Total Input Tokens: 25,912
+- Total Output Tokens: 16,641
+- Total Tokens: 42,553
+- **Total Cost: $0.3274**
+- Model: Claude Sonnet 4
+
