@@ -911,3 +911,59 @@ STEP 9: Saving final article...
 [2025-10-23 09:22:15] [INFO] Total cost: $0.3274
 [2025-10-23 09:22:15] [INFO] Output: /home/runner/work/youtube-article-agent/youtube-article-agent/output/article_context_engineering_20251023_092215.md
 [2025-10-23 09:22:15] [INFO] ============================================================
+[2025-10-24 09:13:44] [INFO] Python version: 3.10.18 (main, Jun  4 2025, 04:04:42) [GCC 13.3.0]
+[2025-10-24 09:13:44] [INFO] Working directory: /home/runner/work/youtube-article-agent/youtube-article-agent
+[2025-10-24 09:13:44] [INFO] ============================================================
+[2025-10-24 09:13:44] [INFO] YouTube to Article Writer Agent - Direct Execution
+[2025-10-24 09:13:44] [INFO] ============================================================
+[2025-10-24 09:13:44] [INFO] STEP 1: Reading input files...
+[2025-10-24 09:13:44] [INFO] [OK] Topic: context engineering
+[2025-10-24 09:13:44] [INFO] [OK] Article prompt loaded (355 chars)
+[2025-10-24 09:13:44] [INFO] 
+STEP 2: Searching YouTube for 'context engineering'...
+[2025-10-24 09:13:45] [INFO] [OK] Found 3 videos
+[2025-10-24 09:13:45] [INFO]   1. Stanford's Practical Guide to 10x Your AI Productivity | Jeremy Utley (433 comments, 407,742 views)
+[2025-10-24 09:13:45] [INFO]   2. Why LLMs get dumb (Context Windows Explained) (318 comments, 153,233 views)
+[2025-10-24 09:13:45] [INFO]   3. The Model Context Protocol (MCP) (239 comments, 209,448 views)
+[2025-10-24 09:13:45] [INFO] 
+STEP 3: Extracting transcripts...
+[2025-10-24 09:13:45] [INFO]   Attempting video 1: Stanford's Practical Guide to 10x Your AI Productivity | Jeremy Utley
+[2025-10-24 09:13:56] [INFO]   [OK] Video 1: Success! (4559 words)
+[2025-10-24 09:13:56] [INFO]   Attempting video 2: Why LLMs get dumb (Context Windows Explained)
+[2025-10-24 09:14:01] [INFO]   [OK] Video 2: Success! (3459 words)
+[2025-10-24 09:14:01] [INFO]   Attempting video 3: The Model Context Protocol (MCP)
+[2025-10-24 09:14:07] [INFO]   [OK] Video 3: Success! (3821 words)
+[2025-10-24 09:14:07] [INFO] 
+[OK] Successfully extracted 3 transcript(s)
+[2025-10-24 09:14:07] [INFO] 
+STEP 4: Generating initial article...
+[2025-10-24 09:15:38] [INFO] [OK] Initial article generated (2527 words)
+[2025-10-24 09:15:38] [INFO]   Cost: $0.0667
+[2025-10-24 09:15:38] [INFO] [OK] Draft saved: article_draft.md
+[2025-10-24 09:15:38] [INFO] 
+STEP 6: Refining article with video 2...
+[2025-10-24 09:17:58] [INFO] [OK] Article refined with video 2 (3494 words)
+[2025-10-24 09:17:58] [INFO]   Cost: $0.0927
+[2025-10-24 09:17:58] [INFO] [OK] Draft updated with video 2
+[2025-10-24 09:17:58] [INFO] 
+STEP 7: Refining article with video 3...
+[2025-10-24 09:21:06] [INFO] [OK] Article refined with video 3 (4522 words)
+[2025-10-24 09:21:06] [INFO]   Cost: $0.1155
+[2025-10-24 09:21:06] [INFO] [OK] Draft updated with video 3
+[2025-10-24 09:21:06] [INFO] 
+STEP 8: Generating cost summary...
+[2025-10-24 09:21:06] [INFO] Total Cost: $0.2748
+[2025-10-24 09:21:06] [INFO] Total Input Tokens: 24,304
+[2025-10-24 09:21:06] [INFO] Total Output Tokens: 13,460
+[2025-10-24 09:21:06] [INFO] 
+STEP 9: Saving final article...
+[2025-10-24 09:21:06] [INFO] [OK] Article saved to: /home/runner/work/youtube-article-agent/youtube-article-agent/output/article_context_engineering_20251024_092106.md
+[2025-10-24 09:21:06] [INFO] 
+============================================================
+[2025-10-24 09:21:06] [INFO] [OK] WORKFLOW COMPLETED SUCCESSFULLY!
+[2025-10-24 09:21:06] [INFO] ============================================================
+[2025-10-24 09:21:06] [INFO] Videos processed: 3
+[2025-10-24 09:21:06] [INFO] Final article length: 26152 characters
+[2025-10-24 09:21:06] [INFO] Total cost: $0.2748
+[2025-10-24 09:21:06] [INFO] Output: /home/runner/work/youtube-article-agent/youtube-article-agent/output/article_context_engineering_20251024_092106.md
+[2025-10-24 09:21:06] [INFO] ============================================================

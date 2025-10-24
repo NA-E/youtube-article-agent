@@ -238,3 +238,11 @@ The future belongs to those who can collaborate effectively with artificial inte
    - Views: 209,448
    - Comments: 239
 
+**Cost Summary:**
+
+- Total Input Tokens: 24,304
+- Total Output Tokens: 13,460
+- Total Tokens: 37,764
+- **Total Cost: $0.2748**
+- Model: Claude Sonnet 4
+
