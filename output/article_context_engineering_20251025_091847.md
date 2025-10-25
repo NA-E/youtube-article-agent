@@ -275,3 +275,11 @@ With tools like MCP making it easier than ever to connect AI to your real-world 
    - Views: 209,624
    - Comments: 239
 
+**Cost Summary:**
+
+- Total Input Tokens: 25,346
+- Total Output Tokens: 14,774
+- Total Tokens: 40,120
+- **Total Cost: $0.2976**
+- Model: Claude Sonnet 4
+
