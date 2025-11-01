@@ -1158,3 +1158,30 @@ STEP 3: Extracting transcripts...
 [2025-10-31 09:13:37] [INFO] 
 STEP 4: Generating initial article...
 [2025-10-31 09:13:38] [ERROR] Error generating article: Error generating article: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CUf282J3UayJouJ7GMFot'}
+[2025-11-01 09:11:22] [INFO] Python version: 3.10.19 (main, Oct 10 2025, 01:01:37) [GCC 13.3.0]
+[2025-11-01 09:11:22] [INFO] Working directory: /home/runner/work/youtube-article-agent/youtube-article-agent
+[2025-11-01 09:11:22] [INFO] ============================================================
+[2025-11-01 09:11:22] [INFO] YouTube to Article Writer Agent - Direct Execution
+[2025-11-01 09:11:22] [INFO] ============================================================
+[2025-11-01 09:11:22] [INFO] STEP 1: Reading input files...
+[2025-11-01 09:11:22] [INFO] [OK] Topic: context engineering
+[2025-11-01 09:11:22] [INFO] [OK] Article prompt loaded (355 chars)
+[2025-11-01 09:11:22] [INFO] 
+STEP 2: Searching YouTube for 'context engineering'...
+[2025-11-01 09:11:22] [INFO] [OK] Found 3 videos
+[2025-11-01 09:11:22] [INFO]   1. Prompt Engineering Tutorial – Master ChatGPT and LLM Responses (1,084 comments, 2,419,377 views)
+[2025-11-01 09:11:22] [INFO]   2. Why MCP really is a big deal | Model Context Protocol with Tim Berglund (747 comments, 590,269 views)
+[2025-11-01 09:11:22] [INFO]   3. Stanford's Practical Guide to 10x Your AI Productivity | Jeremy Utley (439 comments, 421,512 views)
+[2025-11-01 09:11:22] [INFO] 
+STEP 3: Extracting transcripts...
+[2025-11-01 09:11:22] [INFO]   Attempting video 1: Prompt Engineering Tutorial – Master ChatGPT and LLM Responses
+[2025-11-01 09:11:28] [INFO]   [OK] Video 1: Success! (6576 words)
+[2025-11-01 09:11:28] [INFO]   Attempting video 2: Why MCP really is a big deal | Model Context Protocol with Tim Berglund
+[2025-11-01 09:11:30] [INFO]   [OK] Video 2: Success! (1936 words)
+[2025-11-01 09:11:30] [INFO]   Attempting video 3: Stanford's Practical Guide to 10x Your AI Productivity | Jeremy Utley
+[2025-11-01 09:11:39] [INFO]   [OK] Video 3: Success! (4559 words)
+[2025-11-01 09:11:39] [INFO] 
+[OK] Successfully extracted 3 transcript(s)
+[2025-11-01 09:11:39] [INFO] 
+STEP 4: Generating initial article...
+[2025-11-01 09:11:39] [ERROR] Error generating article: Error generating article: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CUgunEDtsZ2ZJ1jS49Kb9'}
