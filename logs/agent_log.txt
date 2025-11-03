@@ -1212,3 +1212,30 @@ STEP 3: Extracting transcripts...
 [2025-11-02 09:11:01] [INFO] 
 STEP 4: Generating initial article...
 [2025-11-02 09:11:01] [ERROR] Error generating article: Error generating article: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CUioYLpSaSau15nKqjSRM'}
+[2025-11-03 09:15:18] [INFO] Python version: 3.10.19 (main, Oct 10 2025, 01:01:37) [GCC 13.3.0]
+[2025-11-03 09:15:18] [INFO] Working directory: /home/runner/work/youtube-article-agent/youtube-article-agent
+[2025-11-03 09:15:18] [INFO] ============================================================
+[2025-11-03 09:15:18] [INFO] YouTube to Article Writer Agent - Direct Execution
+[2025-11-03 09:15:18] [INFO] ============================================================
+[2025-11-03 09:15:18] [INFO] STEP 1: Reading input files...
+[2025-11-03 09:15:18] [INFO] [OK] Topic: context engineering
+[2025-11-03 09:15:18] [INFO] [OK] Article prompt loaded (355 chars)
+[2025-11-03 09:15:18] [INFO] 
+STEP 2: Searching YouTube for 'context engineering'...
+[2025-11-03 09:15:19] [INFO] [OK] Found 3 videos
+[2025-11-03 09:15:19] [INFO]   1. Why MCP really is a big deal | Model Context Protocol with Tim Berglund (748 comments, 591,837 views)
+[2025-11-03 09:15:19] [INFO]   2. Stanford's Practical Guide to 10x Your AI Productivity | Jeremy Utley (442 comments, 424,598 views)
+[2025-11-03 09:15:19] [INFO]   3. The Model Context Protocol (MCP) (239 comments, 211,149 views)
+[2025-11-03 09:15:19] [INFO] 
+STEP 3: Extracting transcripts...
+[2025-11-03 09:15:19] [INFO]   Attempting video 1: Why MCP really is a big deal | Model Context Protocol with Tim Berglund
+[2025-11-03 09:15:21] [INFO]   [OK] Video 1: Success! (1936 words)
+[2025-11-03 09:15:21] [INFO]   Attempting video 2: Stanford's Practical Guide to 10x Your AI Productivity | Jeremy Utley
+[2025-11-03 09:15:23] [INFO]   [OK] Video 2: Success! (4559 words)
+[2025-11-03 09:15:23] [INFO]   Attempting video 3: The Model Context Protocol (MCP)
+[2025-11-03 09:15:27] [INFO]   [OK] Video 3: Success! (3821 words)
+[2025-11-03 09:15:27] [INFO] 
+[OK] Successfully extracted 3 transcript(s)
+[2025-11-03 09:15:27] [INFO] 
+STEP 4: Generating initial article...
+[2025-11-03 09:15:27] [ERROR] Error generating article: Error generating article: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CUkhgrBp33nmeAXdUV2mc'}
