@@ -1293,3 +1293,30 @@ STEP 3: Extracting transcripts...
 [2025-11-05 09:14:23] [INFO] 
 STEP 4: Generating initial article...
 [2025-11-05 09:14:24] [ERROR] Error generating article: Error generating article: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CUpVDzGrBEkjtoe7twauM'}
+[2025-11-06 09:13:55] [INFO] Python version: 3.10.19 (main, Oct 10 2025, 01:01:37) [GCC 13.3.0]
+[2025-11-06 09:13:55] [INFO] Working directory: /home/runner/work/youtube-article-agent/youtube-article-agent
+[2025-11-06 09:13:55] [INFO] ============================================================
+[2025-11-06 09:13:55] [INFO] YouTube to Article Writer Agent - Direct Execution
+[2025-11-06 09:13:55] [INFO] ============================================================
+[2025-11-06 09:13:55] [INFO] STEP 1: Reading input files...
+[2025-11-06 09:13:55] [INFO] [OK] Topic: context engineering
+[2025-11-06 09:13:55] [INFO] [OK] Article prompt loaded (355 chars)
+[2025-11-06 09:13:55] [INFO] 
+STEP 2: Searching YouTube for 'context engineering'...
+[2025-11-06 09:13:56] [INFO] [OK] Found 3 videos
+[2025-11-06 09:13:56] [INFO]   1. Why MCP really is a big deal | Model Context Protocol with Tim Berglund (752 comments, 594,837 views)
+[2025-11-06 09:13:56] [INFO]   2. Stanford's Practical Guide to 10x Your AI Productivity | Jeremy Utley (444 comments, 428,743 views)
+[2025-11-06 09:13:56] [INFO]   3. Why LLMs get dumb (Context Windows Explained) (326 comments, 156,849 views)
+[2025-11-06 09:13:56] [INFO] 
+STEP 3: Extracting transcripts...
+[2025-11-06 09:13:56] [INFO]   Attempting video 1: Why MCP really is a big deal | Model Context Protocol with Tim Berglund
+[2025-11-06 09:14:04] [INFO]   [OK] Video 1: Success! (1936 words)
+[2025-11-06 09:14:04] [INFO]   Attempting video 2: Stanford's Practical Guide to 10x Your AI Productivity | Jeremy Utley
+[2025-11-06 09:14:09] [INFO]   [OK] Video 2: Success! (4559 words)
+[2025-11-06 09:14:09] [INFO]   Attempting video 3: Why LLMs get dumb (Context Windows Explained)
+[2025-11-06 09:14:13] [INFO]   [OK] Video 3: Success! (3459 words)
+[2025-11-06 09:14:13] [INFO] 
+[OK] Successfully extracted 3 transcript(s)
+[2025-11-06 09:14:13] [INFO] 
+STEP 4: Generating initial article...
+[2025-11-06 09:14:13] [ERROR] Error generating article: Error generating article: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CUrP28LW6qiHpo7VEJ214'}
