@@ -1536,3 +1536,30 @@ STEP 3: Extracting transcripts...
 [2025-11-14 09:13:56] [INFO] 
 STEP 4: Generating initial article...
 [2025-11-14 09:13:56] [ERROR] Error generating article: Error generating article: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CV7XUC5wKoZaXZ6kGXSVs'}
+[2025-11-15 09:11:09] [INFO] Python version: 3.10.19 (main, Oct 10 2025, 01:01:37) [GCC 13.3.0]
+[2025-11-15 09:11:09] [INFO] Working directory: /home/runner/work/youtube-article-agent/youtube-article-agent
+[2025-11-15 09:11:09] [INFO] ============================================================
+[2025-11-15 09:11:09] [INFO] YouTube to Article Writer Agent - Direct Execution
+[2025-11-15 09:11:09] [INFO] ============================================================
+[2025-11-15 09:11:09] [INFO] STEP 1: Reading input files...
+[2025-11-15 09:11:09] [INFO] [OK] Topic: context engineering
+[2025-11-15 09:11:09] [INFO] [OK] Article prompt loaded (355 chars)
+[2025-11-15 09:11:09] [INFO] 
+STEP 2: Searching YouTube for 'context engineering'...
+[2025-11-15 09:11:09] [INFO] [OK] Found 3 videos
+[2025-11-15 09:11:09] [INFO]   1. You've Been Using AI the Hard Way (Use This Instead) (3,227 comments, 856,462 views)
+[2025-11-15 09:11:09] [INFO]   2. Stanford's Practical Guide to 10x Your AI Productivity | Jeremy Utley (449 comments, 437,338 views)
+[2025-11-15 09:11:09] [INFO]   3. Why LLMs get dumb (Context Windows Explained) (331 comments, 158,992 views)
+[2025-11-15 09:11:09] [INFO] 
+STEP 3: Extracting transcripts...
+[2025-11-15 09:11:09] [INFO]   Attempting video 1: You've Been Using AI the Hard Way (Use This Instead)
+[2025-11-15 09:11:17] [INFO]   [OK] Video 1: Success! (7427 words)
+[2025-11-15 09:11:17] [INFO]   Attempting video 2: Stanford's Practical Guide to 10x Your AI Productivity | Jeremy Utley
+[2025-11-15 09:11:26] [INFO]   [OK] Video 2: Success! (4559 words)
+[2025-11-15 09:11:26] [INFO]   Attempting video 3: Why LLMs get dumb (Context Windows Explained)
+[2025-11-15 09:11:29] [INFO]   [OK] Video 3: Success! (3459 words)
+[2025-11-15 09:11:29] [INFO] 
+[OK] Successfully extracted 3 transcript(s)
+[2025-11-15 09:11:29] [INFO] 
+STEP 4: Generating initial article...
+[2025-11-15 09:11:30] [ERROR] Error generating article: Error generating article: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CV9R6KMSPgSwVinUJXgBr'}
