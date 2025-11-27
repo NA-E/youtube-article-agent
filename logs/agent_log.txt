@@ -1860,3 +1860,30 @@ STEP 3: Extracting transcripts...
 [2025-11-26 09:14:44] [INFO] 
 STEP 4: Generating initial article...
 [2025-11-26 09:14:44] [ERROR] Error generating article: Error generating article: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CVWFEkUvYCFeXouWnuVMv'}
+[2025-11-27 09:13:45] [INFO] Python version: 3.10.19 (main, Oct 10 2025, 01:01:37) [GCC 13.3.0]
+[2025-11-27 09:13:45] [INFO] Working directory: /home/runner/work/youtube-article-agent/youtube-article-agent
+[2025-11-27 09:13:45] [INFO] ============================================================
+[2025-11-27 09:13:45] [INFO] YouTube to Article Writer Agent - Direct Execution
+[2025-11-27 09:13:45] [INFO] ============================================================
+[2025-11-27 09:13:45] [INFO] STEP 1: Reading input files...
+[2025-11-27 09:13:45] [INFO] [OK] Topic: context engineering
+[2025-11-27 09:13:45] [INFO] [OK] Article prompt loaded (355 chars)
+[2025-11-27 09:13:45] [INFO] 
+STEP 2: Searching YouTube for 'context engineering'...
+[2025-11-27 09:13:46] [INFO] [OK] Found 3 videos
+[2025-11-27 09:13:46] [INFO]   1. You've Been Using AI the Hard Way (Use This Instead) (3,565 comments, 993,917 views)
+[2025-11-27 09:13:46] [INFO]   2. Why MCP really is a big deal | Model Context Protocol with Tim Berglund (766 comments, 614,076 views)
+[2025-11-27 09:13:46] [INFO]   3. You SUCK at Prompting AI (Here's the secret) (602 comments, 96,126 views)
+[2025-11-27 09:13:46] [INFO] 
+STEP 3: Extracting transcripts...
+[2025-11-27 09:13:46] [INFO]   Attempting video 1: You've Been Using AI the Hard Way (Use This Instead)
+[2025-11-27 09:13:48] [INFO]   [OK] Video 1: Success! (7436 words)
+[2025-11-27 09:13:48] [INFO]   Attempting video 2: Why MCP really is a big deal | Model Context Protocol with Tim Berglund
+[2025-11-27 09:13:51] [INFO]   [OK] Video 2: Success! (1936 words)
+[2025-11-27 09:13:51] [INFO]   Attempting video 3: You SUCK at Prompting AI (Here's the secret)
+[2025-11-27 09:13:54] [INFO]   [OK] Video 3: Success! (5238 words)
+[2025-11-27 09:13:54] [INFO] 
+[OK] Successfully extracted 3 transcript(s)
+[2025-11-27 09:13:54] [INFO] 
+STEP 4: Generating initial article...
+[2025-11-27 09:13:54] [ERROR] Error generating article: Error generating article: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CVY8yzHH94EuZU5EBQdzZ'}
