@@ -2612,3 +2612,59 @@ STEP 3: Extracting transcripts...
 [2025-12-24 09:17:12] [INFO] 
 STEP 4: Generating initial article...
 [2025-12-24 09:17:13] [ERROR] Error generating article: Error generating article: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CWRG5KFweLLuDqnh1sLEi'}
+[2025-12-25 09:15:10] [INFO] Python version: 3.10.19 (main, Oct 10 2025, 01:01:37) [GCC 13.3.0]
+[2025-12-25 09:15:10] [INFO] Working directory: /home/runner/work/youtube-article-agent/youtube-article-agent
+[2025-12-25 09:15:10] [INFO] ============================================================
+[2025-12-25 09:15:10] [INFO] YouTube to Article Writer Agent - Direct Execution
+[2025-12-25 09:15:10] [INFO] ============================================================
+[2025-12-25 09:15:10] [INFO] STEP 1: Reading input files...
+[2025-12-25 09:15:10] [INFO] [OK] Topic: context engineering
+[2025-12-25 09:15:10] [INFO] [OK] Article prompt loaded (355 chars)
+[2025-12-25 09:15:10] [INFO] 
+STEP 2: Searching YouTube for 'context engineering'...
+[2025-12-25 09:15:11] [INFO] [OK] Found 3 videos
+[2025-12-25 09:15:11] [INFO]   1. You've Been Using AI the Hard Way (Use This Instead) (4,070 comments, 1,195,159 views)
+[2025-12-25 09:15:11] [INFO]   2. Why MCP really is a big deal | Model Context Protocol with Tim Berglund (776 comments, 632,867 views)
+[2025-12-25 09:15:11] [INFO]   3. Stanford's Practical Guide to 10x Your AI Productivity | Jeremy Utley (477 comments, 474,028 views)
+[2025-12-25 09:15:11] [INFO] 
+STEP 3: Extracting transcripts...
+[2025-12-25 09:15:11] [INFO]   Attempting video 1: You've Been Using AI the Hard Way (Use This Instead)
+[2025-12-25 09:15:24] [INFO]   [OK] Video 1: Success! (7436 words)
+[2025-12-25 09:15:24] [INFO]   Attempting video 2: Why MCP really is a big deal | Model Context Protocol with Tim Berglund
+[2025-12-25 09:15:33] [INFO]   [OK] Video 2: Success! (1936 words)
+[2025-12-25 09:15:33] [INFO]   Attempting video 3: Stanford's Practical Guide to 10x Your AI Productivity | Jeremy Utley
+[2025-12-25 09:15:35] [INFO]   [OK] Video 3: Success! (4559 words)
+[2025-12-25 09:15:35] [INFO] 
+[OK] Successfully extracted 3 transcript(s)
+[2025-12-25 09:15:35] [INFO] 
+STEP 4: Generating initial article...
+[2025-12-25 09:17:03] [INFO] [OK] Initial article generated (2042 words)
+[2025-12-25 09:17:03] [INFO]   Cost: $0.0725
+[2025-12-25 09:17:03] [INFO] [OK] Draft saved: article_draft.md
+[2025-12-25 09:17:03] [INFO] 
+STEP 6: Refining article with video 2...
+[2025-12-25 09:18:41] [INFO] [OK] Article refined with video 2 (2419 words)
+[2025-12-25 09:18:41] [INFO]   Cost: $0.0660
+[2025-12-25 09:18:41] [INFO] [OK] Draft updated with video 2
+[2025-12-25 09:18:41] [INFO] 
+STEP 7: Refining article with video 3...
+[2025-12-25 09:21:33] [INFO] [OK] Article refined with video 3 (3960 words)
+[2025-12-25 09:21:33] [INFO]   Cost: $0.1066
+[2025-12-25 09:21:33] [INFO] [OK] Draft updated with video 3
+[2025-12-25 09:21:33] [INFO] 
+STEP 8: Generating cost summary...
+[2025-12-25 09:21:33] [INFO] Total Cost: $0.2451
+[2025-12-25 09:21:33] [INFO] Total Input Tokens: 25,777
+[2025-12-25 09:21:33] [INFO] Total Output Tokens: 11,184
+[2025-12-25 09:21:33] [INFO] 
+STEP 9: Saving final article...
+[2025-12-25 09:21:33] [INFO] [OK] Article saved to: /home/runner/work/youtube-article-agent/youtube-article-agent/output/article_context_engineering_20251225_092133.md
+[2025-12-25 09:21:33] [INFO] 
+============================================================
+[2025-12-25 09:21:33] [INFO] [OK] WORKFLOW COMPLETED SUCCESSFULLY!
+[2025-12-25 09:21:33] [INFO] ============================================================
+[2025-12-25 09:21:33] [INFO] Videos processed: 3
+[2025-12-25 09:21:33] [INFO] Final article length: 22532 characters
+[2025-12-25 09:21:33] [INFO] Total cost: $0.2451
+[2025-12-25 09:21:33] [INFO] Output: /home/runner/work/youtube-article-agent/youtube-article-agent/output/article_context_engineering_20251225_092133.md
+[2025-12-25 09:21:33] [INFO] ============================================================

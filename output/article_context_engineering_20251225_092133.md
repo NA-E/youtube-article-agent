@@ -265,3 +265,11 @@ Seriously, nothing is stopping you from trying this right now. Dip your toe in t
    - Views: 474,028
    - Comments: 477
 
+**Cost Summary:**
+
+- Total Input Tokens: 25,777
+- Total Output Tokens: 11,184
+- Total Tokens: 36,961
+- **Total Cost: $0.2451**
+- Model: Claude Sonnet 4
+
