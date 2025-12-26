@@ -273,3 +273,11 @@ The tools I create are so powerful for me. I wake up every day feeling like I ha
    - Views: 694,996
    - Comments: 515
 
+**Cost Summary:**
+
+- Total Input Tokens: 24,215
+- Total Output Tokens: 13,754
+- Total Tokens: 37,969
+- **Total Cost: $0.2790**
+- Model: Claude Sonnet 4
+
