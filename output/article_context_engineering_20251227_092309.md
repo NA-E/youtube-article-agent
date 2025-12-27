@@ -345,3 +345,11 @@ So get your coffee ready, fire up that terminal, and join me in the place where 
    - Views: 475,065
    - Comments: 476
 
+**Cost Summary:**
+
+- Total Input Tokens: 30,081
+- Total Output Tokens: 17,668
+- Total Tokens: 47,749
+- **Total Cost: $0.3553**
+- Model: Claude Sonnet 4
+
