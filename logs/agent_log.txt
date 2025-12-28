@@ -2780,3 +2780,59 @@ STEP 9: Saving final article...
 [2025-12-27 09:23:09] [INFO] Total cost: $0.3553
 [2025-12-27 09:23:09] [INFO] Output: /home/runner/work/youtube-article-agent/youtube-article-agent/output/article_context_engineering_20251227_092309.md
 [2025-12-27 09:23:09] [INFO] ============================================================
+[2025-12-28 09:12:59] [INFO] Python version: 3.10.19 (main, Oct 10 2025, 01:01:37) [GCC 13.3.0]
+[2025-12-28 09:12:59] [INFO] Working directory: /home/runner/work/youtube-article-agent/youtube-article-agent
+[2025-12-28 09:12:59] [INFO] ============================================================
+[2025-12-28 09:12:59] [INFO] YouTube to Article Writer Agent - Direct Execution
+[2025-12-28 09:12:59] [INFO] ============================================================
+[2025-12-28 09:12:59] [INFO] STEP 1: Reading input files...
+[2025-12-28 09:12:59] [INFO] [OK] Topic: context engineering
+[2025-12-28 09:12:59] [INFO] [OK] Article prompt loaded (355 chars)
+[2025-12-28 09:12:59] [INFO] 
+STEP 2: Searching YouTube for 'context engineering'...
+[2025-12-28 09:13:00] [INFO] [OK] Found 3 videos
+[2025-12-28 09:13:00] [INFO]   1. You've Been Using AI the Hard Way (Use This Instead) (4,143 comments, 1,210,511 views)
+[2025-12-28 09:13:00] [INFO]   2. Why MCP really is a big deal | Model Context Protocol with Tim Berglund (817 comments, 633,988 views)
+[2025-12-28 09:13:00] [INFO]   3. Stanford's Practical Guide to 10x Your AI Productivity | Jeremy Utley (476 comments, 475,657 views)
+[2025-12-28 09:13:00] [INFO] 
+STEP 3: Extracting transcripts...
+[2025-12-28 09:13:00] [INFO]   Attempting video 1: You've Been Using AI the Hard Way (Use This Instead)
+[2025-12-28 09:13:03] [INFO]   [OK] Video 1: Success! (7436 words)
+[2025-12-28 09:13:03] [INFO]   Attempting video 2: Why MCP really is a big deal | Model Context Protocol with Tim Berglund
+[2025-12-28 09:13:09] [INFO]   [OK] Video 2: Success! (1936 words)
+[2025-12-28 09:13:09] [INFO]   Attempting video 3: Stanford's Practical Guide to 10x Your AI Productivity | Jeremy Utley
+[2025-12-28 09:13:14] [INFO]   [OK] Video 3: Success! (4559 words)
+[2025-12-28 09:13:14] [INFO] 
+[OK] Successfully extracted 3 transcript(s)
+[2025-12-28 09:13:14] [INFO] 
+STEP 4: Generating initial article...
+[2025-12-28 09:15:12] [INFO] [OK] Initial article generated (2611 words)
+[2025-12-28 09:15:12] [INFO]   Cost: $0.0854
+[2025-12-28 09:15:12] [INFO] [OK] Draft saved: article_draft.md
+[2025-12-28 09:15:12] [INFO] 
+STEP 6: Refining article with video 2...
+[2025-12-28 09:17:43] [INFO] [OK] Article refined with video 2 (3323 words)
+[2025-12-28 09:17:43] [INFO]   Cost: $0.0881
+[2025-12-28 09:17:43] [INFO] [OK] Draft updated with video 2
+[2025-12-28 09:17:43] [INFO] 
+STEP 7: Refining article with video 3...
+[2025-12-28 09:21:30] [INFO] [OK] Article refined with video 3 (5054 words)
+[2025-12-28 09:21:30] [INFO]   Cost: $0.1344
+[2025-12-28 09:21:30] [INFO] [OK] Draft updated with video 3
+[2025-12-28 09:21:30] [INFO] 
+STEP 8: Generating cost summary...
+[2025-12-28 09:21:30] [INFO] Total Cost: $0.3079
+[2025-12-28 09:21:30] [INFO] Total Input Tokens: 27,935
+[2025-12-28 09:21:30] [INFO] Total Output Tokens: 14,938
+[2025-12-28 09:21:30] [INFO] 
+STEP 9: Saving final article...
+[2025-12-28 09:21:30] [INFO] [OK] Article saved to: /home/runner/work/youtube-article-agent/youtube-article-agent/output/article_context_engineering_20251228_092130.md
+[2025-12-28 09:21:30] [INFO] 
+============================================================
+[2025-12-28 09:21:30] [INFO] [OK] WORKFLOW COMPLETED SUCCESSFULLY!
+[2025-12-28 09:21:30] [INFO] ============================================================
+[2025-12-28 09:21:30] [INFO] Videos processed: 3
+[2025-12-28 09:21:30] [INFO] Final article length: 28785 characters
+[2025-12-28 09:21:30] [INFO] Total cost: $0.3079
+[2025-12-28 09:21:30] [INFO] Output: /home/runner/work/youtube-article-agent/youtube-article-agent/output/article_context_engineering_20251228_092130.md
+[2025-12-28 09:21:30] [INFO] ============================================================
