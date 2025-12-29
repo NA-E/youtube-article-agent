@@ -349,3 +349,11 @@ This isn't just about enhancing desktop applications - this is really a gateway 
    - Views: 476,214
    - Comments: 476
 
+**Cost Summary:**
+
+- Total Input Tokens: 25,804
+- Total Output Tokens: 11,452
+- Total Tokens: 37,256
+- **Total Cost: $0.2492**
+- Model: Claude Sonnet 4
+
