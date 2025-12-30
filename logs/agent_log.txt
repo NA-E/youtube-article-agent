@@ -2892,3 +2892,59 @@ STEP 9: Saving final article...
 [2025-12-29 09:27:27] [INFO] Total cost: $0.2492
 [2025-12-29 09:27:27] [INFO] Output: /home/runner/work/youtube-article-agent/youtube-article-agent/output/article_context_engineering_20251229_092727.md
 [2025-12-29 09:27:27] [INFO] ============================================================
+[2025-12-30 09:17:14] [INFO] Python version: 3.10.19 (main, Oct 10 2025, 01:01:37) [GCC 13.3.0]
+[2025-12-30 09:17:14] [INFO] Working directory: /home/runner/work/youtube-article-agent/youtube-article-agent
+[2025-12-30 09:17:14] [INFO] ============================================================
+[2025-12-30 09:17:14] [INFO] YouTube to Article Writer Agent - Direct Execution
+[2025-12-30 09:17:14] [INFO] ============================================================
+[2025-12-30 09:17:14] [INFO] STEP 1: Reading input files...
+[2025-12-30 09:17:14] [INFO] [OK] Topic: context engineering
+[2025-12-30 09:17:14] [INFO] [OK] Article prompt loaded (355 chars)
+[2025-12-30 09:17:14] [INFO] 
+STEP 2: Searching YouTube for 'context engineering'...
+[2025-12-30 09:17:15] [INFO] [OK] Found 3 videos
+[2025-12-30 09:17:15] [INFO]   1. You've Been Using AI the Hard Way (Use This Instead) (4,173 comments, 1,222,161 views)
+[2025-12-30 09:17:15] [INFO]   2. Why MCP really is a big deal | Model Context Protocol with Tim Berglund (818 comments, 634,844 views)
+[2025-12-30 09:17:15] [INFO]   3. 7 AI Terms You Need to Know: Agents, RAG, ASI & More (515 comments, 703,304 views)
+[2025-12-30 09:17:15] [INFO] 
+STEP 3: Extracting transcripts...
+[2025-12-30 09:17:15] [INFO]   Attempting video 1: You've Been Using AI the Hard Way (Use This Instead)
+[2025-12-30 09:17:18] [INFO]   [OK] Video 1: Success! (7436 words)
+[2025-12-30 09:17:18] [INFO]   Attempting video 2: Why MCP really is a big deal | Model Context Protocol with Tim Berglund
+[2025-12-30 09:17:24] [INFO]   [OK] Video 2: Success! (1936 words)
+[2025-12-30 09:17:24] [INFO]   Attempting video 3: 7 AI Terms You Need to Know: Agents, RAG, ASI & More
+[2025-12-30 09:17:29] [INFO]   [OK] Video 3: Success! (1709 words)
+[2025-12-30 09:17:29] [INFO] 
+[OK] Successfully extracted 3 transcript(s)
+[2025-12-30 09:17:29] [INFO] 
+STEP 4: Generating initial article...
+[2025-12-30 09:19:34] [INFO] [OK] Initial article generated (2690 words)
+[2025-12-30 09:19:34] [INFO]   Cost: $0.0869
+[2025-12-30 09:19:34] [INFO] [OK] Draft saved: article_draft.md
+[2025-12-30 09:19:34] [INFO] 
+STEP 6: Refining article with video 2...
+[2025-12-30 09:22:00] [INFO] [OK] Article refined with video 2 (3191 words)
+[2025-12-30 09:22:00] [INFO]   Cost: $0.0855
+[2025-12-30 09:22:00] [INFO] [OK] Draft updated with video 2
+[2025-12-30 09:22:00] [INFO] 
+STEP 7: Refining article with video 3...
+[2025-12-30 09:24:52] [INFO] [OK] Article refined with video 3 (3863 words)
+[2025-12-30 09:24:52] [INFO]   Cost: $0.0988
+[2025-12-30 09:24:52] [INFO] [OK] Draft updated with video 3
+[2025-12-30 09:24:52] [INFO] 
+STEP 8: Generating cost summary...
+[2025-12-30 09:24:52] [INFO] Total Cost: $0.2713
+[2025-12-30 09:24:52] [INFO] Total Input Tokens: 24,135
+[2025-12-30 09:24:52] [INFO] Total Output Tokens: 13,259
+[2025-12-30 09:24:52] [INFO] 
+STEP 9: Saving final article...
+[2025-12-30 09:24:52] [INFO] [OK] Article saved to: /home/runner/work/youtube-article-agent/youtube-article-agent/output/article_context_engineering_20251230_092452.md
+[2025-12-30 09:24:52] [INFO] 
+============================================================
+[2025-12-30 09:24:52] [INFO] [OK] WORKFLOW COMPLETED SUCCESSFULLY!
+[2025-12-30 09:24:52] [INFO] ============================================================
+[2025-12-30 09:24:52] [INFO] Videos processed: 3
+[2025-12-30 09:24:52] [INFO] Final article length: 21844 characters
+[2025-12-30 09:24:52] [INFO] Total cost: $0.2713
+[2025-12-30 09:24:52] [INFO] Output: /home/runner/work/youtube-article-agent/youtube-article-agent/output/article_context_engineering_20251230_092452.md
+[2025-12-30 09:24:52] [INFO] ============================================================
