@@ -316,3 +316,11 @@ I wake up every day feeling like I have superpowers. I want this for you.
    - Views: 477,465
    - Comments: 475
 
+**Cost Summary:**
+
+- Total Input Tokens: 27,362
+- Total Output Tokens: 13,890
+- Total Tokens: 41,252
+- **Total Cost: $0.2904**
+- Model: Claude Sonnet 4
+
