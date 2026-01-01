@@ -309,3 +309,11 @@ Remember what Jeremy Utley said: "As we increase adoption and increase fluency a
    - Views: 477,990
    - Comments: 475
 
+**Cost Summary:**
+
+- Total Input Tokens: 27,945
+- Total Output Tokens: 14,126
+- Total Tokens: 42,071
+- **Total Cost: $0.2957**
+- Model: Claude Sonnet 4
+
