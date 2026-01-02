@@ -347,3 +347,11 @@ All these foundational prompting techniques, learning how to talk to AI, all the
    - Views: 478,589
    - Comments: 475
 
+**Cost Summary:**
+
+- Total Input Tokens: 34,892
+- Total Output Tokens: 18,622
+- Total Tokens: 53,514
+- **Total Cost: $0.3840**
+- Model: Claude Sonnet 4
+
