@@ -302,3 +302,11 @@ Nothing is stopping you from trying this right now. Get out of that browser. Tak
    - Views: 479,341
    - Comments: 476
 
+**Cost Summary:**
+
+- Total Input Tokens: 33,022
+- Total Output Tokens: 15,035
+- Total Tokens: 48,057
+- **Total Cost: $0.3246**
+- Model: Claude Sonnet 4
+
