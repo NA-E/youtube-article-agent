@@ -362,3 +362,11 @@ I don't really use these AI terminal tools to help me create. I use them to crit
    - Views: 479,896
    - Comments: 476
 
+**Cost Summary:**
+
+- Total Input Tokens: 35,259
+- Total Output Tokens: 18,989
+- Total Tokens: 54,248
+- **Total Cost: $0.3906**
+- Model: Claude Sonnet 4
+
