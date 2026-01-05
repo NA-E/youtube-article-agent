@@ -332,3 +332,11 @@ And perhaps the most important thing you could do after reading this article is 
    - Views: 480,543
    - Comments: 476
 
+**Cost Summary:**
+
+- Total Input Tokens: 32,847
+- Total Output Tokens: 15,980
+- Total Tokens: 48,827
+- **Total Cost: $0.3382**
+- Model: Claude Sonnet 4
+
