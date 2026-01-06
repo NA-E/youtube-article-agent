@@ -298,3 +298,11 @@ The future belongs to those who can coach AI, not code it. And that future start
    - Views: 168,446
    - Comments: 340
 
+**Cost Summary:**
+
+- Total Input Tokens: 30,299
+- Total Output Tokens: 14,377
+- Total Tokens: 44,676
+- **Total Cost: $0.3066**
+- Model: Claude Sonnet 4
+
