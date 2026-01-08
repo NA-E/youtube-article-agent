@@ -402,3 +402,11 @@ If I back out, I can log into Claude with this command: `opencode login`. I can 
    - Views: 482,402
    - Comments: 476
 
+**Cost Summary:**
+
+- Total Input Tokens: 36,468
+- Total Output Tokens: 20,198
+- Total Tokens: 56,666
+- **Total Cost: $0.4124**
+- Model: Claude Sonnet 4
+

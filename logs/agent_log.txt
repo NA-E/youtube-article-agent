@@ -3396,3 +3396,59 @@ STEP 9: Saving final article...
 [2026-01-07 09:29:03] [INFO] Total cost: $0.3257
 [2026-01-07 09:29:03] [INFO] Output: /home/runner/work/youtube-article-agent/youtube-article-agent/output/article_context_engineering_20260107_092903.md
 [2026-01-07 09:29:03] [INFO] ============================================================
+[2026-01-08 09:20:08] [INFO] Python version: 3.10.19 (main, Oct 10 2025, 01:01:37) [GCC 13.3.0]
+[2026-01-08 09:20:08] [INFO] Working directory: /home/runner/work/youtube-article-agent/youtube-article-agent
+[2026-01-08 09:20:08] [INFO] ============================================================
+[2026-01-08 09:20:08] [INFO] YouTube to Article Writer Agent - Direct Execution
+[2026-01-08 09:20:08] [INFO] ============================================================
+[2026-01-08 09:20:08] [INFO] STEP 1: Reading input files...
+[2026-01-08 09:20:08] [INFO] [OK] Topic: context engineering
+[2026-01-08 09:20:08] [INFO] [OK] Article prompt loaded (355 chars)
+[2026-01-08 09:20:08] [INFO] 
+STEP 2: Searching YouTube for 'context engineering'...
+[2026-01-08 09:20:09] [INFO] [OK] Found 3 videos
+[2026-01-08 09:20:09] [INFO]   1. You've Been Using AI the Hard Way (Use This Instead) (4,240 comments, 1,274,275 views)
+[2026-01-08 09:20:09] [INFO]   2. You SUCK at Prompting AI (Here's the secret) (1,660 comments, 440,384 views)
+[2026-01-08 09:20:09] [INFO]   3. Stanford's Practical Guide to 10x Your AI Productivity | Jeremy Utley (476 comments, 482,402 views)
+[2026-01-08 09:20:09] [INFO] 
+STEP 3: Extracting transcripts...
+[2026-01-08 09:20:09] [INFO]   Attempting video 1: You've Been Using AI the Hard Way (Use This Instead)
+[2026-01-08 09:20:11] [INFO]   [OK] Video 1: Success! (7436 words)
+[2026-01-08 09:20:11] [INFO]   Attempting video 2: You SUCK at Prompting AI (Here's the secret)
+[2026-01-08 09:20:16] [INFO]   [OK] Video 2: Success! (5255 words)
+[2026-01-08 09:20:16] [INFO]   Attempting video 3: Stanford's Practical Guide to 10x Your AI Productivity | Jeremy Utley
+[2026-01-08 09:20:20] [INFO]   [OK] Video 3: Success! (4559 words)
+[2026-01-08 09:20:20] [INFO] 
+[OK] Successfully extracted 3 transcript(s)
+[2026-01-08 09:20:20] [INFO] 
+STEP 4: Generating initial article...
+[2026-01-08 09:23:07] [INFO] [OK] Initial article generated (3531 words)
+[2026-01-08 09:23:07] [INFO]   Cost: $0.1046
+[2026-01-08 09:23:07] [INFO] [OK] Draft saved: article_draft.md
+[2026-01-08 09:23:07] [INFO] 
+STEP 6: Refining article with video 2...
+[2026-01-08 09:27:11] [INFO] [OK] Article refined with video 2 (5308 words)
+[2026-01-08 09:27:11] [INFO]   Cost: $0.1469
+[2026-01-08 09:27:11] [INFO] [OK] Draft updated with video 2
+[2026-01-08 09:27:11] [INFO] 
+STEP 7: Refining article with video 3...
+[2026-01-08 09:31:39] [INFO] [OK] Article refined with video 3 (5907 words)
+[2026-01-08 09:31:39] [INFO]   Cost: $0.1609
+[2026-01-08 09:31:39] [INFO] [OK] Draft updated with video 3
+[2026-01-08 09:31:39] [INFO] 
+STEP 8: Generating cost summary...
+[2026-01-08 09:31:39] [INFO] Total Cost: $0.4124
+[2026-01-08 09:31:39] [INFO] Total Input Tokens: 36,468
+[2026-01-08 09:31:39] [INFO] Total Output Tokens: 20,198
+[2026-01-08 09:31:39] [INFO] 
+STEP 9: Saving final article...
+[2026-01-08 09:31:39] [INFO] [OK] Article saved to: /home/runner/work/youtube-article-agent/youtube-article-agent/output/article_context_engineering_20260108_093139.md
+[2026-01-08 09:31:39] [INFO] 
+============================================================
+[2026-01-08 09:31:39] [INFO] [OK] WORKFLOW COMPLETED SUCCESSFULLY!
+[2026-01-08 09:31:39] [INFO] ============================================================
+[2026-01-08 09:31:39] [INFO] Videos processed: 3
+[2026-01-08 09:31:39] [INFO] Final article length: 33110 characters
+[2026-01-08 09:31:39] [INFO] Total cost: $0.4124
+[2026-01-08 09:31:39] [INFO] Output: /home/runner/work/youtube-article-agent/youtube-article-agent/output/article_context_engineering_20260108_093139.md
+[2026-01-08 09:31:39] [INFO] ============================================================
