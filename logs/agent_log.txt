@@ -3508,3 +3508,30 @@ STEP 9: Saving final article...
 [2026-01-09 09:28:01] [INFO] Total cost: $0.3038
 [2026-01-09 09:28:01] [INFO] Output: /home/runner/work/youtube-article-agent/youtube-article-agent/output/article_context_engineering_20260109_092801.md
 [2026-01-09 09:28:01] [INFO] ============================================================
+[2026-01-10 09:12:38] [INFO] Python version: 3.10.19 (main, Oct 10 2025, 01:01:37) [GCC 13.3.0]
+[2026-01-10 09:12:38] [INFO] Working directory: /home/runner/work/youtube-article-agent/youtube-article-agent
+[2026-01-10 09:12:38] [INFO] ============================================================
+[2026-01-10 09:12:38] [INFO] YouTube to Article Writer Agent - Direct Execution
+[2026-01-10 09:12:38] [INFO] ============================================================
+[2026-01-10 09:12:38] [INFO] STEP 1: Reading input files...
+[2026-01-10 09:12:38] [INFO] [OK] Topic: context engineering
+[2026-01-10 09:12:38] [INFO] [OK] Article prompt loaded (355 chars)
+[2026-01-10 09:12:38] [INFO] 
+STEP 2: Searching YouTube for 'context engineering'...
+[2026-01-10 09:12:39] [INFO] [OK] Found 3 videos
+[2026-01-10 09:12:39] [INFO]   1. You've Been Using AI the Hard Way (Use This Instead) (4,273 comments, 1,286,929 views)
+[2026-01-10 09:12:39] [INFO]   2. Stanford's Practical Guide to 10x Your AI Productivity | Jeremy Utley (477 comments, 483,594 views)
+[2026-01-10 09:12:39] [INFO]   3. Why LLMs get dumb (Context Windows Explained) (340 comments, 169,058 views)
+[2026-01-10 09:12:39] [INFO] 
+STEP 3: Extracting transcripts...
+[2026-01-10 09:12:39] [INFO]   Attempting video 1: You've Been Using AI the Hard Way (Use This Instead)
+[2026-01-10 09:12:42] [INFO]   [OK] Video 1: Success! (7436 words)
+[2026-01-10 09:12:42] [INFO]   Attempting video 2: Stanford's Practical Guide to 10x Your AI Productivity | Jeremy Utley
+[2026-01-10 09:12:46] [INFO]   [OK] Video 2: Success! (4559 words)
+[2026-01-10 09:12:46] [INFO]   Attempting video 3: Why LLMs get dumb (Context Windows Explained)
+[2026-01-10 09:12:50] [INFO]   [OK] Video 3: Success! (3459 words)
+[2026-01-10 09:12:50] [INFO] 
+[OK] Successfully extracted 3 transcript(s)
+[2026-01-10 09:12:50] [INFO] 
+STEP 4: Generating initial article...
+[2026-01-10 09:12:50] [ERROR] Error generating article: Error generating article: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CWySVWqfRArCnUyjEyTtk'}
