@@ -3913,3 +3913,30 @@ STEP 3: Extracting transcripts...
 [2026-01-24 09:13:15] [INFO] 
 STEP 4: Generating initial article...
 [2026-01-24 09:13:15] [ERROR] Error generating article: Error generating article: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CXRwrDgMNeo4wUz75zNPU'}
+[2026-01-25 09:13:37] [INFO] Python version: 3.10.19 (main, Oct 10 2025, 01:01:37) [GCC 13.3.0]
+[2026-01-25 09:13:37] [INFO] Working directory: /home/runner/work/youtube-article-agent/youtube-article-agent
+[2026-01-25 09:13:37] [INFO] ============================================================
+[2026-01-25 09:13:37] [INFO] YouTube to Article Writer Agent - Direct Execution
+[2026-01-25 09:13:37] [INFO] ============================================================
+[2026-01-25 09:13:37] [INFO] STEP 1: Reading input files...
+[2026-01-25 09:13:37] [INFO] [OK] Topic: context engineering
+[2026-01-25 09:13:37] [INFO] [OK] Article prompt loaded (355 chars)
+[2026-01-25 09:13:37] [INFO] 
+STEP 2: Searching YouTube for 'context engineering'...
+[2026-01-25 09:13:38] [INFO] [OK] Found 3 videos
+[2026-01-25 09:13:38] [INFO]   1. You've Been Using AI the Hard Way (Use This Instead) (4,462 comments, 1,388,307 views)
+[2026-01-25 09:13:38] [INFO]   2. You SUCK at Prompting AI (Here's the secret) (1,788 comments, 491,708 views)
+[2026-01-25 09:13:38] [INFO]   3. Why MCP really is a big deal | Model Context Protocol with Tim Berglund (825 comments, 646,693 views)
+[2026-01-25 09:13:38] [INFO] 
+STEP 3: Extracting transcripts...
+[2026-01-25 09:13:38] [INFO]   Attempting video 1: You've Been Using AI the Hard Way (Use This Instead)
+[2026-01-25 09:13:46] [INFO]   [OK] Video 1: Success! (7436 words)
+[2026-01-25 09:13:46] [INFO]   Attempting video 2: You SUCK at Prompting AI (Here's the secret)
+[2026-01-25 09:13:48] [INFO]   [OK] Video 2: Success! (5255 words)
+[2026-01-25 09:13:48] [INFO]   Attempting video 3: Why MCP really is a big deal | Model Context Protocol with Tim Berglund
+[2026-01-25 09:13:52] [INFO]   [OK] Video 3: Success! (1936 words)
+[2026-01-25 09:13:52] [INFO] 
+[OK] Successfully extracted 3 transcript(s)
+[2026-01-25 09:13:52] [INFO] 
+STEP 4: Generating initial article...
+[2026-01-25 09:13:52] [ERROR] Error generating article: Error generating article: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CXTqhr6AH17ATRuBASWub'}
