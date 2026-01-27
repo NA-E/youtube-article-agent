@@ -3967,3 +3967,26 @@ STEP 3: Extracting transcripts...
 [2026-01-26 09:26:14] [INFO] 
 STEP 4: Generating initial article...
 [2026-01-26 09:26:15] [ERROR] Error generating article: Error generating article: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CXVkTUtjneAyVDzPafu2M'}
+[2026-01-27 09:24:17] [INFO] Python version: 3.10.19 (main, Oct 10 2025, 01:01:37) [GCC 13.3.0]
+[2026-01-27 09:24:17] [INFO] Working directory: /home/runner/work/youtube-article-agent/youtube-article-agent
+[2026-01-27 09:24:17] [INFO] ============================================================
+[2026-01-27 09:24:17] [INFO] YouTube to Article Writer Agent - Direct Execution
+[2026-01-27 09:24:17] [INFO] ============================================================
+[2026-01-27 09:24:17] [INFO] STEP 1: Reading input files...
+[2026-01-27 09:24:17] [INFO] [OK] Topic: context engineering
+[2026-01-27 09:24:17] [INFO] [OK] Article prompt loaded (355 chars)
+[2026-01-27 09:24:17] [INFO] 
+STEP 2: Searching YouTube for 'context engineering'...
+[2026-01-27 09:24:17] [INFO] [OK] Found 3 videos
+[2026-01-27 09:24:17] [INFO]   1. You've Been Using AI the Hard Way (Use This Instead) (4,479 comments, 1,402,973 views)
+[2026-01-27 09:24:17] [INFO]   2. You SUCK at Prompting AI (Here's the secret) (1,813 comments, 499,516 views)
+[2026-01-27 09:24:17] [INFO]   3. Why MCP really is a big deal | Model Context Protocol with Tim Berglund (825 comments, 647,459 views)
+[2026-01-27 09:24:17] [INFO] 
+STEP 3: Extracting transcripts...
+[2026-01-27 09:24:17] [INFO]   Attempting video 1: You've Been Using AI the Hard Way (Use This Instead)
+[2026-01-27 09:24:36] [INFO]   [FAIL] Video 1: No transcript available
+[2026-01-27 09:24:36] [INFO]   Attempting video 2: You SUCK at Prompting AI (Here's the secret)
+[2026-01-27 09:25:02] [INFO]   [FAIL] Video 2: No transcript available
+[2026-01-27 09:25:02] [INFO]   Attempting video 3: Why MCP really is a big deal | Model Context Protocol with Tim Berglund
+[2026-01-27 09:25:27] [INFO]   [FAIL] Video 3: No transcript available
+[2026-01-27 09:25:27] [ERROR] ERROR: No videos with transcripts found!
