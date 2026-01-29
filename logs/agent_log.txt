@@ -4017,3 +4017,30 @@ STEP 3: Extracting transcripts...
 [2026-01-28 09:26:21] [INFO] 
 STEP 4: Generating initial article...
 [2026-01-28 09:26:21] [ERROR] Error generating article: Error generating article: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CXZY5oRxjA7M2Ev1CnpSt'}
+[2026-01-29 09:32:41] [INFO] Python version: 3.10.19 (main, Oct 10 2025, 01:01:37) [GCC 13.3.0]
+[2026-01-29 09:32:41] [INFO] Working directory: /home/runner/work/youtube-article-agent/youtube-article-agent
+[2026-01-29 09:32:41] [INFO] ============================================================
+[2026-01-29 09:32:41] [INFO] YouTube to Article Writer Agent - Direct Execution
+[2026-01-29 09:32:41] [INFO] ============================================================
+[2026-01-29 09:32:41] [INFO] STEP 1: Reading input files...
+[2026-01-29 09:32:41] [INFO] [OK] Topic: context engineering
+[2026-01-29 09:32:41] [INFO] [OK] Article prompt loaded (355 chars)
+[2026-01-29 09:32:41] [INFO] 
+STEP 2: Searching YouTube for 'context engineering'...
+[2026-01-29 09:32:41] [INFO] [OK] Found 3 videos
+[2026-01-29 09:32:41] [INFO]   1. You've Been Using AI the Hard Way (Use This Instead) (4,491 comments, 1,416,242 views)
+[2026-01-29 09:32:41] [INFO]   2. You SUCK at Prompting AI (Here's the secret) (1,827 comments, 505,651 views)
+[2026-01-29 09:32:41] [INFO]   3. Stanford's Practical Guide to 10x Your AI Productivity | Jeremy Utley (480 comments, 492,883 views)
+[2026-01-29 09:32:41] [INFO] 
+STEP 3: Extracting transcripts...
+[2026-01-29 09:32:41] [INFO]   Attempting video 1: You've Been Using AI the Hard Way (Use This Instead)
+[2026-01-29 09:32:43] [INFO]   [OK] Video 1: Success! (7436 words)
+[2026-01-29 09:32:43] [INFO]   Attempting video 2: You SUCK at Prompting AI (Here's the secret)
+[2026-01-29 09:32:46] [INFO]   [OK] Video 2: Success! (5255 words)
+[2026-01-29 09:32:46] [INFO]   Attempting video 3: Stanford's Practical Guide to 10x Your AI Productivity | Jeremy Utley
+[2026-01-29 09:32:48] [INFO]   [OK] Video 3: Success! (4559 words)
+[2026-01-29 09:32:48] [INFO] 
+[OK] Successfully extracted 3 transcript(s)
+[2026-01-29 09:32:48] [INFO] 
+STEP 4: Generating initial article...
+[2026-01-29 09:32:48] [ERROR] Error generating article: Error generating article: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CXbSPEHE52VuXaV6STcQa'}
