@@ -4179,3 +4179,30 @@ STEP 3: Extracting transcripts...
 [2026-02-03 09:31:38] [INFO] 
 STEP 4: Generating initial article...
 [2026-02-03 09:31:38] [ERROR] Error generating article: Error generating article: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CXkuLfLhKf5eRyAsBnyrH'}
+[2026-02-04 09:34:15] [INFO] Python version: 3.10.19 (main, Oct 10 2025, 01:01:37) [GCC 13.3.0]
+[2026-02-04 09:34:15] [INFO] Working directory: /home/runner/work/youtube-article-agent/youtube-article-agent
+[2026-02-04 09:34:15] [INFO] ============================================================
+[2026-02-04 09:34:15] [INFO] YouTube to Article Writer Agent - Direct Execution
+[2026-02-04 09:34:15] [INFO] ============================================================
+[2026-02-04 09:34:15] [INFO] STEP 1: Reading input files...
+[2026-02-04 09:34:15] [INFO] [OK] Topic: context engineering
+[2026-02-04 09:34:15] [INFO] [OK] Article prompt loaded (355 chars)
+[2026-02-04 09:34:15] [INFO] 
+STEP 2: Searching YouTube for 'context engineering'...
+[2026-02-04 09:34:16] [INFO] [OK] Found 3 videos
+[2026-02-04 09:34:16] [INFO]   1. You've Been Using AI the Hard Way (Use This Instead) (4,627 comments, 1,454,705 views)
+[2026-02-04 09:34:16] [INFO]   2. You SUCK at Prompting AI (Here's the secret) (1,864 comments, 522,246 views)
+[2026-02-04 09:34:16] [INFO]   3. The 5 Step Playbook for 10x Your AI Productivity | Jeremy Utley (485 comments, 494,866 views)
+[2026-02-04 09:34:16] [INFO] 
+STEP 3: Extracting transcripts...
+[2026-02-04 09:34:16] [INFO]   Attempting video 1: You've Been Using AI the Hard Way (Use This Instead)
+[2026-02-04 09:34:25] [INFO]   [OK] Video 1: Success! (7436 words)
+[2026-02-04 09:34:25] [INFO]   Attempting video 2: You SUCK at Prompting AI (Here's the secret)
+[2026-02-04 09:34:29] [INFO]   [OK] Video 2: Success! (5255 words)
+[2026-02-04 09:34:29] [INFO]   Attempting video 3: The 5 Step Playbook for 10x Your AI Productivity | Jeremy Utley
+[2026-02-04 09:34:34] [INFO]   [OK] Video 3: Success! (4559 words)
+[2026-02-04 09:34:34] [INFO] 
+[OK] Successfully extracted 3 transcript(s)
+[2026-02-04 09:34:34] [INFO] 
+STEP 4: Generating initial article...
+[2026-02-04 09:34:34] [ERROR] Error generating article: Error generating article: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CXnoNXCfULyeAmTpnFZja'}
