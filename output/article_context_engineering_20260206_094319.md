@@ -351,3 +351,11 @@ And he told me this. He says before he sits down to work on any kind of prompt o
    - Views: 495,830
    - Comments: 483
 
+**Cost Summary:**
+
+- Total Input Tokens: 34,378
+- Total Output Tokens: 18,105
+- Total Tokens: 52,483
+- **Total Cost: $0.3747**
+- Model: Claude Sonnet 4
+
